@@ -261,7 +261,7 @@
     document.getElementById('inputSize').value = size;
   }
 
-  function submitOrder() {
+  async function submitOrder() {
     const name = document.getElementById('inputName').value.trim();
     const phone = document.getElementById('inputPhone').value.trim();
     const size = document.getElementById('inputSize').value;
@@ -270,9 +270,43 @@
       alert('Vui lòng điền đầy đủ thông tin nhé!');
       return;
     }
-    document.getElementById('successModal').classList.add('show');
-    const s = document.getElementById('stockCount');
-    if (s && parseInt(s.textContent) > 1) s.textContent = parseInt(s.textContent) - 1;
+
+    const btn = document.querySelector('.submit-btn');
+    btn.textContent = 'ĐANG GỬI ĐƠN...';
+    btn.disabled = true;
+
+    try {
+      const formData = new FormData();
+      formData.append('ho_ten', name);
+      formData.append('so_dien_thoai', phone);
+      formData.append('size_giay', size);
+      formData.append('dia_chi', addr);
+      formData.append('san_pham', 'Ultra Run Pro 2025 — 790.000đ');
+
+      const res = await fetch('https://forminit.com/f/4dicsejng5c', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        document.getElementById('successModal').classList.add('show');
+        document.getElementById('inputName').value = '';
+        document.getElementById('inputPhone').value = '';
+        document.getElementById('inputSize').value = '';
+        document.getElementById('inputAddr').value = '';
+        document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('sel'));
+        const s = document.getElementById('stockCount');
+        if (s && parseInt(s.textContent) > 1) s.textContent = parseInt(s.textContent) - 1;
+      } else {
+        alert('Có lỗi xảy ra, vui lòng thử lại hoặc liên hệ shop qua Facebook!');
+      }
+    } catch (e) {
+      alert('Mất kết nối mạng, vui lòng thử lại!');
+    } finally {
+      btn.textContent = 'ĐẶT HÀNG — THANH TOÁN KHI NHẬN';
+      btn.disabled = false;
+    }
   }
 </script>
 </body>
