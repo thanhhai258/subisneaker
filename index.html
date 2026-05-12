@@ -1,313 +1,740 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ultra Run Pro 2025 — Giày Thể Thao Nam</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Barlow', sans-serif; background: #0a0a0a; color: #f0ede8; max-width: 480px; margin: 0 auto; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ultra Run Pro 2026 — Giày Thể Thao Nam Subi Sneaker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  /* HERO */
-  .hero { background: #111; padding: 40px 24px 32px; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(255,90,0,0.15) 0%, transparent 70%); pointer-events: none; }
-  .badge { display: inline-block; background: #ff5a00; color: #fff; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 2px; margin-bottom: 14px; }
-  .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: 52px; line-height: 1.0; color: #fff; margin-bottom: 6px; }
-  .hero-title span { color: #ff5a00; }
-  .hero-sub { font-size: 14px; color: #888; margin-bottom: 22px; }
-  .shoe-visual { width: 100%; height: 220px; background: linear-gradient(135deg, #1e1e1e, #2a2a2a); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 100px; margin-bottom: 22px; filter: drop-shadow(0 8px 24px rgba(255,90,0,0.2)); }
-  .price-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-  .price-new { font-family: 'Bebas Neue', sans-serif; font-size: 44px; color: #ff5a00; line-height: 1; }
-  .price-old { font-size: 18px; color: #555; text-decoration: line-through; }
-  .savings-pill { background: rgba(255,90,0,0.15); border: 1px solid rgba(255,90,0,0.35); color: #ff7a30; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
-  .trust-row { display: flex; gap: 14px; flex-wrap: wrap; }
-  .trust-item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: #777; }
-  .trust-dot { width: 5px; height: 5px; border-radius: 50%; background: #ff5a00; flex-shrink: 0; }
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: #0a0a0a;
+      color: #f0ede8;
+      max-width: 480px;
+      margin: 0 auto;
+    }
 
-  /* SECTIONS */
-  .section { padding: 28px 24px; }
-  .section-alt { background: #0f0f0f; }
-  .divider { width: 36px; height: 3px; background: #ff5a00; margin-bottom: 14px; }
-  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: #fff; margin-bottom: 18px; letter-spacing: 0.5px; }
+    /* HERO */
+    .hero {
+      background: #111;
+      padding: 40px 24px 32px;
+      position: relative;
+      overflow: hidden;
+    }
 
-  /* FEATURES */
-  .features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .feat-card { background: #141414; border: 0.5px solid #222; border-radius: 10px; padding: 14px; }
-  .feat-icon { font-size: 22px; margin-bottom: 8px; }
-  .feat-title { font-size: 13px; font-weight: 600; color: #f0ede8; margin-bottom: 4px; }
-  .feat-desc { font-size: 11px; color: #555; line-height: 1.5; }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 90, 0, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
 
-  /* SIZE */
-  .size-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-  .size-btn { width: 50px; height: 42px; border: 1.5px solid #222; border-radius: 6px; background: #1a1a1a; color: #aaa; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: center; }
-  .size-btn:hover, .size-btn.sel { border-color: #ff5a00; color: #ff5a00; background: rgba(255,90,0,0.08); }
-  .size-note { font-size: 11px; color: #555; margin-top: 10px; }
+    .badge {
+      display: inline-block;
+      background: #ff5a00;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 2px;
+      margin-bottom: 14px;
+    }
 
-  /* REVIEWS */
-  .reviews { display: flex; flex-direction: column; gap: 12px; }
-  .review-card { background: #141414; border: 0.5px solid #222; border-radius: 10px; padding: 14px; }
-  .stars { color: #ff5a00; font-size: 13px; margin-bottom: 8px; }
-  .review-text { font-size: 13px; color: #ccc; line-height: 1.6; margin-bottom: 10px; font-style: italic; }
-  .reviewer { display: flex; align-items: center; gap: 8px; }
-  .avatar { width: 32px; height: 32px; border-radius: 50%; background: #ff5a00; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #fff; flex-shrink: 0; }
-  .rev-name { font-size: 12px; font-weight: 600; color: #f0ede8; }
-  .rev-meta { font-size: 11px; color: #555; }
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 52px;
+      line-height: 1.0;
+      color: #fff;
+      margin-bottom: 6px;
+    }
 
-  /* ORDER FORM */
-  .order-form-wrap { padding: 0 24px 28px; }
-  .order-form { background: #ff5a00; border-radius: 16px; padding: 24px; }
-  .form-title { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: #fff; margin-bottom: 2px; }
-  .form-sub { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 18px; }
-  .form-group { margin-bottom: 12px; }
-  .form-label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 5px; display: block; }
-  .form-input, .form-select { width: 100%; background: rgba(0,0,0,0.22); border: 1.5px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 11px 14px; color: #fff; font-size: 14px; font-family: 'Barlow', sans-serif; outline: none; -webkit-appearance: none; appearance: none; }
-  .form-input::placeholder { color: rgba(255,255,255,0.35); }
-  .form-input:focus, .form-select:focus { border-color: rgba(255,255,255,0.65); background: rgba(0,0,0,0.32); }
-  .form-select option { background: #1a1a1a; color: #f0ede8; }
-  .submit-btn { width: 100%; background: #fff; color: #ff5a00; font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px; border: none; border-radius: 10px; padding: 15px; cursor: pointer; margin-top: 6px; transition: transform 0.1s; }
-  .submit-btn:hover { transform: scale(1.02); }
-  .submit-btn:active { transform: scale(0.98); }
-  .cod-row { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 12px; flex-wrap: wrap; }
-  .cod-item { font-size: 11px; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 4px; }
+    .hero-title span {
+      color: #ff5a00;
+    }
 
-  /* GUARANTEE */
-  .guarantee { background: #0f0f0f; border: 0.5px solid #1e1e1e; border-radius: 12px; padding: 18px; margin: 0 24px 0; text-align: center; }
-  .guarantee p { font-size: 13px; color: #666; line-height: 1.7; }
-  .guarantee strong { color: #ccc; }
+    .hero-sub {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 22px;
+    }
 
-  /* STICKY CTA */
-  .sticky-cta { background: #ff5a00; padding: 14px 24px; text-align: center; position: sticky; bottom: 0; }
-  .sticky-cta p { font-size: 12px; color: rgba(255,255,255,0.8); margin-bottom: 8px; }
-  .sticky-cta button { background: #fff; color: #ff5a00; font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 1px; border: none; border-radius: 8px; padding: 12px 40px; cursor: pointer; }
+    .shoe-visual {
+      width: 100%;
+      height: 220px;
+      background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 100px;
+      margin-bottom: 22px;
+      filter: drop-shadow(0 8px 24px rgba(255, 90, 0, 0.2));
+    }
 
-  /* SUCCESS MODAL */
-  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 200; align-items: center; justify-content: center; }
-  .modal-overlay.show { display: flex; }
-  .modal-box { background: #1a1a1a; border: 0.5px solid #2a2a2a; border-radius: 16px; padding: 32px 24px; max-width: 300px; width: 90%; text-align: center; }
-  .modal-icon { font-size: 52px; margin-bottom: 14px; }
-  .modal-title { font-family: 'Bebas Neue', sans-serif; font-size: 34px; color: #ff5a00; margin-bottom: 10px; }
-  .modal-msg { font-size: 13px; color: #888; line-height: 1.7; margin-bottom: 20px; }
-  .modal-close { background: #ff5a00; color: #fff; border: none; border-radius: 8px; padding: 12px 28px; font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; }
-</style>
+    .price-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .price-new {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 44px;
+      color: #ff5a00;
+      line-height: 1;
+    }
+
+    .price-old {
+      font-size: 18px;
+      color: #555;
+      text-decoration: line-through;
+    }
+
+    .savings-pill {
+      background: rgba(255, 90, 0, 0.15);
+      border: 1px solid rgba(255, 90, 0, 0.35);
+      color: #ff7a30;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    .trust-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: #777;
+    }
+
+    .trust-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #ff5a00;
+      flex-shrink: 0;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 28px 24px;
+    }
+
+    .section-alt {
+      background: #0f0f0f;
+    }
+
+    .divider {
+      width: 36px;
+      height: 3px;
+      background: #ff5a00;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    /* FEATURES */
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .feat-card {
+      background: #141414;
+      border: 0.5px solid #222;
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .feat-icon {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .feat-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #f0ede8;
+      margin-bottom: 4px;
+    }
+
+    .feat-desc {
+      font-size: 11px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* SIZE */
+    .size-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .size-btn {
+      width: 50px;
+      height: 42px;
+      border: 1.5px solid #222;
+      border-radius: 6px;
+      background: #1a1a1a;
+      color: #aaa;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .size-btn:hover,
+    .size-btn.sel {
+      border-color: #ff5a00;
+      color: #ff5a00;
+      background: rgba(255, 90, 0, 0.08);
+    }
+
+    .size-note {
+      font-size: 11px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    /* REVIEWS */
+    .reviews {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .review-card {
+      background: #141414;
+      border: 0.5px solid #222;
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .stars {
+      color: #ff5a00;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .review-text {
+      font-size: 13px;
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #ff5a00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .rev-name {
+      font-size: 12px;
+      font-weight: 600;
+      color: #f0ede8;
+    }
+
+    .rev-meta {
+      font-size: 11px;
+      color: #555;
+    }
+
+    /* ORDER FORM */
+    .order-form-wrap {
+      padding: 0 24px 28px;
+    }
+
+    .order-form {
+      background: #ff5a00;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .form-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+
+    .form-sub {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.7);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .form-input,
+    .form-select {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.22);
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 11px 14px;
+      color: #fff;
+      font-size: 14px;
+      font-family: 'Barlow', sans-serif;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .form-input::placeholder {
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+      border-color: rgba(255, 255, 255, 0.65);
+      background: rgba(0, 0, 0, 0.32);
+    }
+
+    .form-select option {
+      background: #1a1a1a;
+      color: #f0ede8;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: #fff;
+      color: #ff5a00;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 1px;
+      border: none;
+      border-radius: 10px;
+      padding: 15px;
+      cursor: pointer;
+      margin-top: 6px;
+      transition: transform 0.1s;
+    }
+
+    .submit-btn:hover {
+      transform: scale(1.02);
+    }
+
+    .submit-btn:active {
+      transform: scale(0.98);
+    }
+
+    .cod-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cod-item {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.65);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* GUARANTEE */
+    .guarantee {
+      background: #0f0f0f;
+      border: 0.5px solid #1e1e1e;
+      border-radius: 12px;
+      padding: 18px;
+      margin: 0 24px 0;
+      text-align: center;
+    }
+
+    .guarantee p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .guarantee strong {
+      color: #ccc;
+    }
+
+    /* STICKY CTA */
+    .sticky-cta {
+      background: #ff5a00;
+      padding: 14px 24px;
+      text-align: center;
+      position: sticky;
+      bottom: 0;
+    }
+
+    .sticky-cta p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 8px;
+    }
+
+    .sticky-cta button {
+      background: #fff;
+      color: #ff5a00;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      letter-spacing: 1px;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 40px;
+      cursor: pointer;
+    }
+
+    /* SUCCESS MODAL */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-overlay.show {
+      display: flex;
+    }
+
+    .modal-box {
+      background: #1a1a1a;
+      border: 0.5px solid #2a2a2a;
+      border-radius: 16px;
+      padding: 32px 24px;
+      max-width: 300px;
+      width: 90%;
+      text-align: center;
+    }
+
+    .modal-icon {
+      font-size: 52px;
+      margin-bottom: 14px;
+    }
+
+    .modal-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 34px;
+      color: #ff5a00;
+      margin-bottom: 10px;
+    }
+
+    .modal-msg {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .modal-close {
+      background: #ff5a00;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 28px;
+      font-family: 'Barlow', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="badge">Flash Sale — Hôm nay</div>
-  <h1 class="hero-title">ULTRA RUN<br><span>PRO 2025</span></h1>
-  <p class="hero-sub">Giày thể thao nam cao cấp — Chạy bộ &amp; Gym</p>
-  <div class="shoe-visual">👟</div>
-  <div class="price-row">
-    <span class="price-new">790.000đ</span>
-    <span class="price-old">1.200.000đ</span>
-    <span class="savings-pill">–34%</span>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="badge">Flash Sale — Hôm nay</div>
+    <h1 class="hero-title">ULTRA RUN<br><span>PRO 2025</span></h1>
+    <p class="hero-sub">Giày thể thao nam cao cấp — Chạy bộ &amp; Gym</p>
+    <div class="shoe-visual">👟</div>
+    <div class="price-row">
+      <span class="price-new">790.000đ</span>
+      <span class="price-old">1.200.000đ</span>
+      <span class="savings-pill">–34%</span>
+    </div>
+    <div class="trust-row">
+      <span class="trust-item"><span class="trust-dot"></span>Freeship toàn quốc</span>
+      <span class="trust-item"><span class="trust-dot"></span>COD — nhận hàng mới trả</span>
+      <span class="trust-item"><span class="trust-dot"></span>Đổi trả 7 ngày</span>
+    </div>
   </div>
-  <div class="trust-row">
-    <span class="trust-item"><span class="trust-dot"></span>Freeship toàn quốc</span>
-    <span class="trust-item"><span class="trust-dot"></span>COD — nhận hàng mới trả</span>
-    <span class="trust-item"><span class="trust-dot"></span>Đổi trả 7 ngày</span>
-  </div>
-</div>
 
-<!-- FEATURES -->
-<div class="section">
-  <div class="divider"></div>
-  <div class="section-title">Tại sao chọn Ultra Run Pro?</div>
-  <div class="features">
-    <div class="feat-card">
-      <div class="feat-icon">🏃</div>
-      <div class="feat-title">Đế EVA siêu nhẹ</div>
-      <div class="feat-desc">Giảm shock tối ưu, bảo vệ khớp gối khi chạy dài</div>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon">💨</div>
-      <div class="feat-title">Upper thoáng khí</div>
-      <div class="feat-desc">Lưới mesh 3D, không bí chân suốt ngày dài</div>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon">⚡</div>
-      <div class="feat-title">Bám đường tốt</div>
-      <div class="feat-desc">Đế ngoài pattern đa hướng, ổn định mọi bề mặt</div>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon">💪</div>
-      <div class="feat-title">Thiết kế thể thao</div>
-      <div class="feat-desc">Phối đồ linh hoạt: gym, chạy bộ đến cafe cuối tuần</div>
-    </div>
-  </div>
-</div>
-
-<!-- SIZE -->
-<div class="section section-alt">
-  <div class="divider"></div>
-  <div class="section-title">Chọn size của bạn</div>
-  <div class="size-grid">
-    <div class="size-btn" onclick="selectSize(this,'39')">39</div>
-    <div class="size-btn" onclick="selectSize(this,'40')">40</div>
-    <div class="size-btn" onclick="selectSize(this,'41')">41</div>
-    <div class="size-btn" onclick="selectSize(this,'42')">42</div>
-    <div class="size-btn" onclick="selectSize(this,'43')">43</div>
-    <div class="size-btn" onclick="selectSize(this,'44')">44</div>
-    <div class="size-btn" onclick="selectSize(this,'45')">45</div>
-  </div>
-  <p class="size-note">* Bàn chân nở nên chọn size lớn hơn 0.5</p>
-</div>
-
-<!-- REVIEWS -->
-<div class="section">
-  <div class="divider"></div>
-  <div class="section-title">Khách hàng nói gì?</div>
-  <div class="reviews">
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p class="review-text">"Đặt lúc 10h tối, sáng hôm sau có hàng luôn. Giày nhẹ, chạy cảm giác tốt, size chuẩn với bảng size."</p>
-      <div class="reviewer">
-        <div class="avatar">TN</div>
-        <div><div class="rev-name">Trần Nguyên</div><div class="rev-meta">Hà Nội · 2 ngày trước</div></div>
+  <!-- FEATURES -->
+  <div class="section">
+    <div class="divider"></div>
+    <div class="section-title">Tại sao chọn Ultra Run Pro?</div>
+    <div class="features">
+      <div class="feat-card">
+        <div class="feat-icon">🏃</div>
+        <div class="feat-title">Đế EVA siêu nhẹ</div>
+        <div class="feat-desc">Giảm shock tối ưu, bảo vệ khớp gối khi chạy dài</div>
       </div>
-    </div>
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p class="review-text">"Mua size 42, vừa đẹp. Đế bám tốt, tập gym thoải mái. Giá này chất lượng quá ổn, sẽ mua thêm."</p>
-      <div class="reviewer">
-        <div class="avatar">MH</div>
-        <div><div class="rev-name">Minh Hoàng</div><div class="rev-meta">TP.HCM · 5 ngày trước</div></div>
+      <div class="feat-card">
+        <div class="feat-icon">💨</div>
+        <div class="feat-title">Upper thoáng khí</div>
+        <div class="feat-desc">Lưới mesh 3D, không bí chân suốt ngày dài</div>
       </div>
-    </div>
-    <div class="review-card">
-      <div class="stars">★★★★☆</div>
-      <p class="review-text">"Đổi từ màu trắng sang đen, shop hỗ trợ nhiệt tình. Chất lượng ổn, chắc chắn quay lại mua."</p>
-      <div class="reviewer">
-        <div class="avatar">PT</div>
-        <div><div class="rev-name">Phúc Toàn</div><div class="rev-meta">Đà Nẵng · 1 tuần trước</div></div>
+      <div class="feat-card">
+        <div class="feat-icon">⚡</div>
+        <div class="feat-title">Bám đường tốt</div>
+        <div class="feat-desc">Đế ngoài pattern đa hướng, ổn định mọi bề mặt</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">💪</div>
+        <div class="feat-title">Thiết kế thể thao</div>
+        <div class="feat-desc">Phối đồ linh hoạt: gym, chạy bộ đến cafe cuối tuần</div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- ORDER FORM -->
-<div class="order-form-wrap">
-  <div class="order-form">
-    <div class="form-title">Đặt hàng ngay</div>
-    <p class="form-sub">Điền form → shop gọi xác nhận → nhận hàng thanh toán</p>
-    <div class="form-group">
-      <label class="form-label">Họ và tên</label>
-      <input class="form-input" type="text" id="inputName" placeholder="Nguyễn Văn A" />
+  <!-- SIZE -->
+  <div class="section section-alt">
+    <div class="divider"></div>
+    <div class="section-title">Chọn size của bạn</div>
+    <div class="size-grid">
+      <div class="size-btn" onclick="selectSize(this,'39')">39</div>
+      <div class="size-btn" onclick="selectSize(this,'40')">40</div>
+      <div class="size-btn" onclick="selectSize(this,'41')">41</div>
+      <div class="size-btn" onclick="selectSize(this,'42')">42</div>
+      <div class="size-btn" onclick="selectSize(this,'43')">43</div>
+      <div class="size-btn" onclick="selectSize(this,'44')">44</div>
+      <div class="size-btn" onclick="selectSize(this,'45')">45</div>
     </div>
-    <div class="form-group">
-      <label class="form-label">Số điện thoại</label>
-      <input class="form-input" type="tel" id="inputPhone" placeholder="0912 345 678" />
-    </div>
-    <div class="form-group">
-      <label class="form-label">Size giày</label>
-      <select class="form-select" id="inputSize">
-        <option value="">— Chọn size —</option>
-        <option value="39">39</option>
-        <option value="40">40</option>
-        <option value="41">41</option>
-        <option value="42">42</option>
-        <option value="43">43</option>
-        <option value="44">44</option>
-        <option value="45">45</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label class="form-label">Địa chỉ nhận hàng</label>
-      <input class="form-input" type="text" id="inputAddr" placeholder="Số nhà, đường, quận/huyện, tỉnh/TP" />
-    </div>
-    <button class="submit-btn" onclick="submitOrder()">ĐẶT HÀNG — THANH TOÁN KHI NHẬN</button>
-    <div class="cod-row">
-      <span class="cod-item">✓ COD toàn quốc</span>
-      <span class="cod-item">·</span>
-      <span class="cod-item">✓ Freeship nội ô</span>
-      <span class="cod-item">·</span>
-      <span class="cod-item">✓ Đổi size miễn phí</span>
+    <p class="size-note">* Bàn chân nở nên chọn size lớn hơn 0.5</p>
+  </div>
+
+  <!-- REVIEWS -->
+  <div class="section">
+    <div class="divider"></div>
+    <div class="section-title">Khách hàng nói gì?</div>
+    <div class="reviews">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Đặt lúc 10h tối, sáng hôm sau có hàng luôn. Giày nhẹ, chạy cảm giác tốt, size chuẩn với
+          bảng size."</p>
+        <div class="reviewer">
+          <div class="avatar">TN</div>
+          <div>
+            <div class="rev-name">Trần Nguyên</div>
+            <div class="rev-meta">Hà Nội · 2 ngày trước</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Mua size 42, vừa đẹp. Đế bám tốt, tập gym thoải mái. Giá này chất lượng quá ổn, sẽ mua
+          thêm."</p>
+        <div class="reviewer">
+          <div class="avatar">MH</div>
+          <div>
+            <div class="rev-name">Minh Hoàng</div>
+            <div class="rev-meta">TP.HCM · 5 ngày trước</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <p class="review-text">"Đổi từ màu trắng sang đen, shop hỗ trợ nhiệt tình. Chất lượng ổn, chắc chắn quay lại
+          mua."</p>
+        <div class="reviewer">
+          <div class="avatar">PT</div>
+          <div>
+            <div class="rev-name">Phúc Toàn</div>
+            <div class="rev-meta">Đà Nẵng · 1 tuần trước</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- GUARANTEE -->
-<div class="section">
-  <div class="guarantee">
-    <p><strong>Cam kết của shop:</strong> Hàng y hình, đúng mô tả. Nếu không vừa size, liên hệ đổi trong <strong>7 ngày</strong> miễn phí. Giao hàng <strong>1–3 ngày</strong> toàn quốc.</p>
+  <!-- ORDER FORM -->
+  <div class="order-form-wrap">
+    <div class="order-form">
+      <div class="form-title">Đặt hàng ngay</div>
+      <p class="form-sub">Điền form → shop gọi xác nhận → nhận hàng thanh toán</p>
+      <div class="form-group">
+        <label class="form-label">Họ và tên</label>
+        <input class="form-input" type="text" id="inputName" placeholder="Nguyễn Văn A" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Số điện thoại</label>
+        <input class="form-input" type="tel" id="inputPhone" placeholder="0912 345 678" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Size giày</label>
+        <select class="form-select" id="inputSize">
+          <option value="">— Chọn size —</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+          <option value="42">42</option>
+          <option value="43">43</option>
+          <option value="44">44</option>
+          <option value="45">45</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Địa chỉ nhận hàng</label>
+        <input class="form-input" type="text" id="inputAddr" placeholder="Số nhà, đường, quận/huyện, tỉnh/TP" />
+      </div>
+      <button class="submit-btn" onclick="submitOrder()">ĐẶT HÀNG — THANH TOÁN KHI NHẬN</button>
+      <div class="cod-row">
+        <span class="cod-item">✓ COD toàn quốc</span>
+        <span class="cod-item">·</span>
+        <span class="cod-item">✓ Freeship nội ô</span>
+        <span class="cod-item">·</span>
+        <span class="cod-item">✓ Đổi size miễn phí</span>
+      </div>
+    </div>
   </div>
-</div>
 
-<!-- STICKY CTA -->
-<div class="sticky-cta">
-  <p>⏰ Flash sale kết thúc hôm nay — còn <strong id="stockCount">17</strong> đôi</p>
-  <button onclick="document.querySelector('.order-form-wrap').scrollIntoView({behavior:'smooth'})">ĐẶT HÀNG NGAY</button>
-</div>
-
-<!-- SUCCESS MODAL -->
-<div class="modal-overlay" id="successModal">
-  <div class="modal-box">
-    <div class="modal-icon">🎉</div>
-    <div class="modal-title">Đặt hàng thành công!</div>
-    <p class="modal-msg">Shop sẽ gọi xác nhận trong <strong>30 phút</strong>. Vui lòng nghe máy số lạ nhé!</p>
-    <button class="modal-close" onclick="document.getElementById('successModal').classList.remove('show')">Đóng</button>
+  <!-- GUARANTEE -->
+  <div class="section">
+    <div class="guarantee">
+      <p><strong>Cam kết của shop:</strong> Hàng y hình, đúng mô tả. Nếu không vừa size, liên hệ đổi trong <strong>7
+          ngày</strong> miễn phí. Giao hàng <strong>1–3 ngày</strong> toàn quốc.</p>
+    </div>
   </div>
-</div>
 
-<script>
-  let selectedSize = '';
+  <!-- STICKY CTA -->
+  <div class="sticky-cta">
+    <p>⏰ Flash sale kết thúc hôm nay — còn <strong id="stockCount">17</strong> đôi</p>
+    <button onclick="document.querySelector('.order-form-wrap').scrollIntoView({behavior:'smooth'})">ĐẶT HÀNG
+      NGAY</button>
+  </div>
 
-  function selectSize(el, size) {
-    document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('sel'));
-    el.classList.add('sel');
-    selectedSize = size;
-    document.getElementById('inputSize').value = size;
-  }
+  <!-- SUCCESS MODAL -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-box">
+      <div class="modal-icon">🎉</div>
+      <div class="modal-title">Đặt hàng thành công!</div>
+      <p class="modal-msg">Shop sẽ gọi xác nhận trong <strong>30 phút</strong>. Vui lòng nghe máy số lạ nhé!</p>
+      <button class="modal-close"
+        onclick="document.getElementById('successModal').classList.remove('show')">Đóng</button>
+    </div>
+  </div>
 
-  async function submitOrder() {
-    const name = document.getElementById('inputName').value.trim();
-    const phone = document.getElementById('inputPhone').value.trim();
-    const size = document.getElementById('inputSize').value;
-    const addr = document.getElementById('inputAddr').value.trim();
-    if (!name || !phone || !size || !addr) {
-      alert('Vui lòng điền đầy đủ thông tin nhé!');
-      return;
+  <script>
+    let selectedSize = '';
+
+    function selectSize(el, size) {
+      document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('sel'));
+      el.classList.add('sel');
+      selectedSize = size;
+      document.getElementById('inputSize').value = size;
     }
 
-    const btn = document.querySelector('.submit-btn');
-    btn.textContent = 'ĐANG GỬI ĐƠN...';
-    btn.disabled = true;
-
-    try {
-      const formData = new FormData();
-      formData.append('ho_ten', name);
-      formData.append('so_dien_thoai', phone);
-      formData.append('size_giay', size);
-      formData.append('dia_chi', addr);
-      formData.append('san_pham', 'Ultra Run Pro 2025 — 790.000đ');
-
-      const res = await fetch('https://forminit.com/f/4dicsejng5c', {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (res.ok) {
-        document.getElementById('successModal').classList.add('show');
-        document.getElementById('inputName').value = '';
-        document.getElementById('inputPhone').value = '';
-        document.getElementById('inputSize').value = '';
-        document.getElementById('inputAddr').value = '';
-        document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('sel'));
-        const s = document.getElementById('stockCount');
-        if (s && parseInt(s.textContent) > 1) s.textContent = parseInt(s.textContent) - 1;
-      } else {
-        alert('Có lỗi xảy ra, vui lòng thử lại hoặc liên hệ shop qua Facebook!');
+    async function submitOrder() {
+      const name = document.getElementById('inputName').value.trim();
+      const phone = document.getElementById('inputPhone').value.trim();
+      const size = document.getElementById('inputSize').value;
+      const addr = document.getElementById('inputAddr').value.trim();
+      if (!name || !phone || !size || !addr) {
+        alert('Vui lòng điền đầy đủ thông tin nhé!');
+        return;
       }
-    } catch (e) {
-      alert('Mất kết nối mạng, vui lòng thử lại!');
-    } finally {
-      btn.textContent = 'ĐẶT HÀNG — THANH TOÁN KHI NHẬN';
-      btn.disabled = false;
+
+      const btn = document.querySelector('.submit-btn');
+      btn.textContent = 'ĐANG GỬI ĐƠN...';
+      btn.disabled = true;
+
+      try {
+        const formData = new FormData();
+        formData.append('ho_ten', name);
+        formData.append('so_dien_thoai', phone);
+        formData.append('size_giay', size);
+        formData.append('dia_chi', addr);
+        formData.append('san_pham', 'Ultra Run Pro 2025 — 790.000đ');
+
+        const res = await fetch('https://forminit.com/f/4dicsejng5c', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          document.getElementById('successModal').classList.add('show');
+          document.getElementById('inputName').value = '';
+          document.getElementById('inputPhone').value = '';
+          document.getElementById('inputSize').value = '';
+          document.getElementById('inputAddr').value = '';
+          document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('sel'));
+          const s = document.getElementById('stockCount');
+          if (s && parseInt(s.textContent) > 1) s.textContent = parseInt(s.textContent) - 1;
+        } else {
+          alert('Có lỗi xảy ra, vui lòng thử lại hoặc liên hệ shop qua Facebook!');
+        }
+      } catch (e) {
+        alert('Mất kết nối mạng, vui lòng thử lại!');
+      } finally {
+        btn.textContent = 'ĐẶT HÀNG — THANH TOÁN KHI NHẬN';
+        btn.disabled = false;
+      }
     }
-  }
-</script>
+  </script>
 </body>
+
 </html>
