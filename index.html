@@ -286,19 +286,20 @@
     btn.textContent = 'ĐANG GỬI ĐƠN...';
     btn.disabled = true;
 
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyu8naAye7r3NHzJcceOkrHIOEj4Kw4nw4xuxXo47VOO-4XUUFuZ3PhwMber8CRWlE/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzjuJbeb6LkpOzPlb7AETxEDSlIA5ZWrlHk5fiGLyiYNkJ38ZHKYrfi8pGXRMMljX6Avg/exec';
 
-    const formData = new FormData();
-    formData.append('ho_ten', name);
-    formData.append('so_dien_thoai', phone);
-    formData.append('size_giay', size);
-    formData.append('dia_chi', addr);
-    formData.append('san_pham', 'Ultra Run Pro 2025 - 790.000đ');
+    // Dung URL params de tranh CORS - Google Apps Script ho tro cach nay
+    const params = new URLSearchParams({
+      ho_ten: name,
+      so_dien_thoai: phone,
+      size_giay: size,
+      dia_chi: addr,
+      san_pham: 'Ultra Run Pro 2025 - 790.000đ'
+    });
 
     try {
-      await fetch(SCRIPT_URL, {
-        method: 'POST',
-        body: formData,
+      await fetch(SCRIPT_URL + '?' + params.toString(), {
+        method: 'GET',
         mode: 'no-cors'
       });
     } catch(e) {}
