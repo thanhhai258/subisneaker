@@ -278,33 +278,32 @@
     const size = document.getElementById('inputSize').value;
     const addr = document.getElementById('inputAddr').value.trim();
     if (!name || !phone || !size || !addr) {
-      alert('Vui lòng dien day du thong tin nhe!');
+      alert('Vui lòng điền đầy đủ thông tin nhé!');
       return;
     }
 
     const btn = document.querySelector('.submit-btn');
-    btn.textContent = 'DANG GUI DON...';
+    btn.textContent = 'ĐANG GỬI ĐƠN...';
     btn.disabled = true;
+
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyu8naAye7r3NHzJcceOkrHIOEj4Kw4nw4xuxXo47VOO-4XUUFuZ3PhwMber8CRWlE/exec';
 
     const formData = new FormData();
     formData.append('ho_ten', name);
     formData.append('so_dien_thoai', phone);
     formData.append('size_giay', size);
     formData.append('dia_chi', addr);
-    formData.append('san_pham', 'Ultra Run Pro 2025 - 790.000d');
+    formData.append('san_pham', 'Ultra Run Pro 2025 - 790.000đ');
 
-    // Dung no-cors de tranh loi CORS voi Forminit
     try {
-      await fetch('https://forminit.com/f/4dicsejng5c', {
+      await fetch(SCRIPT_URL, {
         method: 'POST',
         body: formData,
         mode: 'no-cors'
       });
     } catch(e) {}
 
-    // no-cors tra ve opaque response, khong doc duoc status
-    // Hien thi thanh cong ngay sau khi gui xong
-    btn.textContent = 'DAT HANG - THANH TOAN KHI NHAN';
+    btn.textContent = 'ĐẶT HÀNG — THANH TOÁN KHI NHẬN';
     btn.disabled = false;
     showSuccess();
   }
