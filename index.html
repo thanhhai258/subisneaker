@@ -3,145 +3,215 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ultra Run Pro 2025 — Giày Thể Thao Nam</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+<title>Ultra Run Pro 2025 — SUBI STORE</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Barlow', sans-serif; background: #0a0a0a; color: #f0ede8; max-width: 480px; margin: 0 auto; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-width: 480px; margin: 0 auto; padding-bottom: 72px; }
 
-  /* HERO */
-  .hero { background: #111; padding: 40px 24px 32px; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(255,90,0,0.15) 0%, transparent 70%); pointer-events: none; }
-  .badge { display: inline-block; background: #ff5a00; color: #fff; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 2px; margin-bottom: 14px; }
-  .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: 52px; line-height: 1.0; color: #fff; margin-bottom: 6px; }
-  .hero-title span { color: #ff5a00; }
-  .hero-sub { font-size: 14px; color: #888; margin-bottom: 22px; }
-  .shoe-visual { width: 100%; height: 220px; background: linear-gradient(135deg, #1e1e1e, #2a2a2a); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 100px; margin-bottom: 22px; filter: drop-shadow(0 8px 24px rgba(255,90,0,0.2)); }
-  .price-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-  .price-new { font-family: 'Bebas Neue', sans-serif; font-size: 44px; color: #ff5a00; line-height: 1; }
-  .price-old { font-size: 18px; color: #555; text-decoration: line-through; }
-  .savings-pill { background: rgba(255,90,0,0.15); border: 1px solid rgba(255,90,0,0.35); color: #ff7a30; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
-  .trust-row { display: flex; gap: 14px; flex-wrap: wrap; }
-  .trust-item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: #777; }
-  .trust-dot { width: 5px; height: 5px; border-radius: 50%; background: #ff5a00; flex-shrink: 0; }
+/* HEADER */
+.header { background: linear-gradient(135deg, #f07820 0%, #e05a00 100%); padding: 10px 20px; display: flex; align-items: center; gap: 12px; }
+.header-logo { height: 45px; width: auto; display: block; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2)); }
+.header-tagline-text { font-size: 12px; color: rgba(255,255,255,0.88); letter-spacing: 0.5px; font-style: italic; font-family: 'Barlow', sans-serif; }
 
-  /* SECTIONS */
-  .section { padding: 28px 24px; }
-  .section-alt { background: #0f0f0f; }
-  .divider { width: 36px; height: 3px; background: #ff5a00; margin-bottom: 14px; }
-  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: #fff; margin-bottom: 18px; letter-spacing: 0.5px; }
+/* CAROUSEL */
+.carousel-wrap { background: #fff; position: relative; user-select: none; }
+.carousel-main { overflow: hidden; position: relative; }
+.carousel-track { display: flex; transition: transform 0.35s ease; will-change: transform; }
+.carousel-slide { flex: 0 0 100%; }
+.carousel-slide img { width: 100%; aspect-ratio: 3/4; object-fit: contain; background: #fff; display: block; }
+.carousel-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.3); color: #fff; border: none; width: 34px; height: 34px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; }
+.carousel-arrow.prev { left: 8px; }
+.carousel-arrow.next { right: 8px; }
+.carousel-dots { display: flex; justify-content: center; gap: 6px; padding: 8px 0 4px; }
+.carousel-dot { width: 7px; height: 7px; border-radius: 50%; background: #ddd; cursor: pointer; transition: background 0.2s; }
+.carousel-dot.active { background: #f07820; }
+.thumb-strip { display: flex; gap: 6px; padding: 8px 10px 12px; overflow-x: auto; scrollbar-width: none; }
+.thumb-strip::-webkit-scrollbar { display: none; }
+.thumb { flex: 0 0 70px; height: 70px; border-radius: 6px; overflow: hidden; border: 2px solid transparent; cursor: pointer; transition: border-color 0.2s; }
+.thumb.active { border-color: #f07820; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-  /* FEATURES */
-  .features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .feat-card { background: #141414; border: 0.5px solid #222; border-radius: 10px; padding: 14px; }
-  .feat-icon { font-size: 22px; margin-bottom: 8px; }
-  .feat-title { font-size: 13px; font-weight: 600; color: #f0ede8; margin-bottom: 4px; }
-  .feat-desc { font-size: 11px; color: #555; line-height: 1.5; }
+/* PRODUCT SECTION */
+.product-section { background: #fff; padding: 16px 16px 0; }
+.product-title { font-size: 18px; font-weight: 700; color: #222; line-height: 1.4; margin-bottom: 14px; text-align: center; }
+.product-title strong { color: #f07820; font-size: 22px; display: block; }
 
-  /* SIZE */
-  .size-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-  .size-btn { width: 50px; height: 42px; border: 1.5px solid #222; border-radius: 6px; background: #1a1a1a; color: #aaa; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: center; }
-  .size-btn:hover, .size-btn.sel { border-color: #ff5a00; color: #ff5a00; background: rgba(255,90,0,0.08); }
-  .size-note { font-size: 11px; color: #555; margin-top: 10px; }
+/* COUNTDOWN */
+.countdown-box { background: #fff; border: 1.5px solid #f07820; border-radius: 8px; padding: 10px 12px; margin-bottom: 14px; }
+.cd-label { font-size: 11px; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 8px; }
+.cd-row { display: flex; align-items: center; gap: 8px; }
+.cd-unit { background: #f07820; color: #fff; border-radius: 6px; width: 52px; text-align: center; padding: 6px 4px 4px; }
+.cd-unit span { font-family: 'Bebas Neue', sans-serif; font-size: 28px; line-height: 1; display: block; }
+.cd-unit small { font-size: 10px; font-weight: 600; opacity: 0.9; display: block; margin-top: -2px; }
+.cd-colon { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: #f07820; }
+.cd-btn { margin-left: auto; background: #f07820; color: #fff; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1px; border: none; border-radius: 6px; padding: 10px 16px; cursor: pointer; text-decoration: none; display: inline-block; white-space: nowrap; }
 
-  /* REVIEWS */
-  .reviews { display: flex; flex-direction: column; gap: 12px; }
-  .review-card { background: #141414; border: 0.5px solid #222; border-radius: 10px; padding: 14px; }
-  .stars { color: #ff5a00; font-size: 13px; margin-bottom: 8px; }
-  .review-text { font-size: 13px; color: #ccc; line-height: 1.6; margin-bottom: 10px; font-style: italic; }
-  .reviewer { display: flex; align-items: center; gap: 8px; }
-  .avatar { width: 32px; height: 32px; border-radius: 50%; background: #ff5a00; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #fff; flex-shrink: 0; }
-  .rev-name { font-size: 12px; font-weight: 600; color: #f0ede8; }
-  .rev-meta { font-size: 11px; color: #555; }
+/* PRICE */
+.price-box { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+.price-now { font-family: 'Bebas Neue', sans-serif; font-size: 38px; color: #f07820; line-height: 1; }
+.price-was { font-size: 16px; color: #aaa; text-decoration: line-through; }
+.price-badge { background: #f07820; color: #fff; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
 
-  /* ORDER FORM */
-  .order-form-wrap { padding: 0 24px 28px; }
-  .order-form { background: #ff5a00; border-radius: 16px; padding: 24px; }
-  .form-title { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: #fff; margin-bottom: 2px; }
-  .form-sub { font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 18px; }
-  .form-group { margin-bottom: 12px; }
-  .form-label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 5px; display: block; }
-  .form-input, .form-select { width: 100%; background: rgba(0,0,0,0.22); border: 1.5px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 11px 14px; color: #fff; font-size: 14px; font-family: 'Barlow', sans-serif; outline: none; -webkit-appearance: none; appearance: none; }
-  .form-input::placeholder { color: rgba(255,255,255,0.35); }
-  .form-input:focus, .form-select:focus { border-color: rgba(255,255,255,0.65); background: rgba(0,0,0,0.32); }
-  .form-select option { background: #1a1a1a; color: #f0ede8; }
-  .submit-btn { width: 100%; background: #fff; color: #ff5a00; font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px; border: none; border-radius: 10px; padding: 15px; cursor: pointer; margin-top: 6px; transition: transform 0.1s; }
-  .submit-btn:hover { transform: scale(1.02); }
-  .submit-btn:active { transform: scale(0.98); }
-  .cod-row { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 12px; flex-wrap: wrap; }
-  .cod-item { font-size: 11px; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 4px; }
+/* TRUST */
+.trust-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+.trust-item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: #444; font-weight: 600; }
+.trust-item::before { content: "✓"; color: #f07820; font-weight: 700; }
 
-  /* GUARANTEE */
-  .guarantee { background: #0f0f0f; border: 0.5px solid #1e1e1e; border-radius: 12px; padding: 18px; margin: 0 24px 0; text-align: center; }
-  .guarantee p { font-size: 13px; color: #666; line-height: 1.7; }
-  .guarantee strong { color: #ccc; }
+/* INFO BOX */
+.info-box { background: #fff8f3; border: 1px dashed #f07820; border-radius: 8px; padding: 14px; margin-bottom: 14px; }
+.info-box-title { font-weight: 700; font-size: 14px; color: #222; margin-bottom: 8px; }
+.info-box p { font-size: 13px; color: #444; line-height: 1.8; }
 
-  /* STICKY CTA */
-  .sticky-cta { background: #ff5a00; padding: 14px 24px; text-align: center; position: sticky; bottom: 0; }
-  .sticky-cta p { font-size: 12px; color: rgba(255,255,255,0.8); margin-bottom: 8px; }
-  .sticky-cta button { background: #fff; color: #ff5a00; font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 1px; border: none; border-radius: 8px; padding: 12px 40px; cursor: pointer; }
+/* SALE BANNER */
+.sale-banner { background: linear-gradient(90deg, #f07820, #e05a00); color: #fff; font-family: 'Barlow', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 1.5px; text-transform: uppercase; text-align: center; padding: 12px; }
 
-  /* SUCCESS MODAL */
-  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 200; align-items: center; justify-content: center; }
-  .modal-overlay.show { display: flex; }
-  .modal-box { background: #1a1a1a; border: 0.5px solid #2a2a2a; border-radius: 16px; padding: 32px 24px; max-width: 300px; width: 90%; text-align: center; }
-  .modal-icon { font-size: 52px; margin-bottom: 14px; }
-  .modal-title { font-family: 'Bebas Neue', sans-serif; font-size: 34px; color: #ff5a00; margin-bottom: 10px; }
-  .modal-msg { font-size: 13px; color: #888; line-height: 1.7; margin-bottom: 20px; }
-  .modal-close { background: #ff5a00; color: #fff; border: none; border-radius: 8px; padding: 12px 28px; font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; }
+/* FEATURES */
+.features-section { background: #fff; padding: 16px; }
+.section-title { font-weight: 700; font-size: 16px; color: #222; margin-bottom: 12px; border-left: 4px solid #f07820; padding-left: 10px; }
+.features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.feat-card { background: #fff8f3; border: 1px solid #ffe0c9; border-radius: 8px; padding: 12px; }
+.feat-icon { font-size: 20px; margin-bottom: 6px; }
+.feat-title { font-size: 13px; font-weight: 700; color: #222; margin-bottom: 3px; }
+.feat-desc { font-size: 11px; color: #666; line-height: 1.5; }
+
+/* SIZE */
+.size-section { background: #fff; padding: 16px; border-top: 8px solid #f5f5f5; }
+.size-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.size-btn { width: 50px; height: 42px; border: 1.5px solid #ddd; border-radius: 6px; background: #fff; color: #555; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
+.size-btn:hover, .size-btn.sel { border-color: #f07820; color: #f07820; background: #fff5ee; }
+.size-note { font-size: 11px; color: #999; margin-top: 10px; }
+
+/* REVIEWS */
+.reviews-section { background: #fff; padding: 16px; border-top: 8px solid #f5f5f5; }
+.reviews { display: flex; flex-direction: column; gap: 10px; }
+.review-card { background: #fafafa; border: 1px solid #eee; border-radius: 8px; padding: 12px; }
+.stars { color: #f07820; font-size: 13px; margin-bottom: 6px; }
+.review-text { font-size: 13px; color: #444; line-height: 1.6; margin-bottom: 8px; font-style: italic; }
+.reviewer { display: flex; align-items: center; gap: 8px; }
+.avatar { width: 30px; height: 30px; border-radius: 50%; background: #f07820; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0; }
+.rev-name { font-size: 12px; font-weight: 700; color: #222; }
+.rev-meta { font-size: 11px; color: #aaa; }
+
+/* GUARANTEE */
+.guarantee-badge { background: #fff; padding: 16px; border-top: 8px solid #f5f5f5; }
+.guarantee-inner { border: 2px solid #f07820; border-radius: 8px; padding: 12px 16px; text-align: center; }
+.guarantee-inner p { font-size: 13px; color: #555; line-height: 1.7; }
+.guarantee-inner strong { color: #f07820; }
+
+/* ORDER FORM */
+.order-section { padding: 16px; background: #f5f5f5; border-top: 8px solid #f5f5f5; }
+.order-form { background: #fff; border-top: 4px solid #f07820; border-radius: 8px; padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.form-title { font-family: 'Barlow', sans-serif; font-weight: 800; font-size: 22px; text-transform: uppercase; color: #222; text-align: center; margin-bottom: 2px; }
+.form-sub { font-size: 12px; color: #f07820; text-align: center; margin-bottom: 16px; }
+.form-group { margin-bottom: 12px; }
+.form-label { font-size: 12px; font-weight: 700; color: #555; margin-bottom: 5px; display: block; }
+.form-input, .form-select { width: 100%; background: #fafafa; border: 1.5px solid #ddd; border-radius: 6px; padding: 11px 12px; color: #222; font-size: 14px; font-family: 'Barlow', sans-serif; outline: none; -webkit-appearance: none; appearance: none; }
+.form-input:focus, .form-select:focus { border-color: #f07820; background: #fff; }
+.form-select option { background: #fff; color: #222; }
+.submit-btn { width: 100%; background: linear-gradient(135deg, #f07820, #e05a00); color: #fff; font-family: 'Barlow', sans-serif; font-weight: 800; font-size: 17px; text-transform: uppercase; letter-spacing: 1px; border: none; border-radius: 8px; padding: 16px; cursor: pointer; margin-top: 6px; transition: transform 0.1s; box-shadow: 0 4px 12px rgba(240,120,32,0.4); }
+.submit-btn:hover { transform: scale(1.02); }
+.submit-btn:active { transform: scale(0.98); }
+.cod-row { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.cod-item { font-size: 11px; color: #888; }
+
+/* STICKY BAR */
+.sticky-bar { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 480px; background: linear-gradient(135deg, #f07820, #e05a00); padding: 10px 16px; display: flex; gap: 10px; align-items: center; z-index: 100; }
+.messenger-btn { background: #fff; color: #f07820; border: none; border-radius: 8px; padding: 11px 14px; font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 6px; cursor: pointer; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+.order-btn { flex: 1; background: #fff; color: #f07820; font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 1px; border: none; border-radius: 8px; padding: 12px; cursor: pointer; }
+
+/* SOCIAL PROOF */
+.social-proof { position: fixed; bottom: 80px; left: calc(50% - 240px); background: #fff; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); padding: 10px 14px; display: flex; align-items: center; gap: 10px; z-index: 99; max-width: 260px; animation: slideIn 0.4s ease; }
+.social-proof.hide { display: none; }
+@keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.sp-avatar { width: 36px; height: 36px; border-radius: 50%; background: #f07820; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; }
+.sp-text { font-size: 12px; color: #444; line-height: 1.4; }
+.sp-text strong { color: #222; font-size: 13px; display: block; }
+.sp-time { font-size: 10px; color: #aaa; margin-top: 2px; }
+
+/* SUCCESS MODAL */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 200; align-items: center; justify-content: center; }
+.modal-overlay.show { display: flex; }
+.modal-box { background: #fff; border-radius: 16px; padding: 32px 24px; max-width: 300px; width: 90%; text-align: center; }
+.modal-icon { font-size: 52px; margin-bottom: 14px; }
+.modal-title { font-family: 'Barlow', sans-serif; font-weight: 800; font-size: 24px; text-transform: uppercase; color: #f07820; margin-bottom: 10px; }
+.modal-msg { font-size: 13px; color: #666; line-height: 1.7; margin-bottom: 20px; }
+.modal-close { background: #f07820; color: #fff; border: none; border-radius: 8px; padding: 12px 28px; font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; }
 </style>
 </head>
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="badge">Flash Sale — Hôm nay</div>
-  <h1 class="hero-title">ULTRA RUN<br><span>PRO 2025</span></h1>
-  <p class="hero-sub">Giày thể thao nam cao cấp — Chạy bộ &amp; Gym</p>
-  <div class="shoe-visual">👟</div>
-  <div class="price-row">
-    <span class="price-new">790.000đ</span>
-    <span class="price-old">1.200.000đ</span>
-    <span class="savings-pill">–34%</span>
+<!-- HEADER -->
+<div class="header">
+  <img src="data:image/png;base64,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" class="header-logo" alt="SUBI STORE" />
+  <div class="header-tagline-text">Giày Thể Thao Chính Hãng</div>
+</div>
+
+<!-- CAROUSEL -->
+<div class="carousel-wrap">
+  <div class="carousel-main" id="carouselMain">
+    <div class="carousel-track" id="carouselTrack">
+      <!-- slides injected by JS -->
+    </div>
+    <button class="carousel-arrow prev" id="prevBtn">&#8249;</button>
+    <button class="carousel-arrow next" id="nextBtn">&#8250;</button>
   </div>
+  <div class="carousel-dots" id="carouselDots"></div>
+  <div class="thumb-strip" id="thumbStrip"></div>
+</div>
+
+<!-- PRODUCT SECTION -->
+<div class="product-section">
+  <h1 class="product-title">Giày Thể Thao Nam Cao Cấp<strong>ULTRA RUN PRO 2025</strong></h1>
+
+  <div class="countdown-box">
+    <span class="cd-label">Chương trình kết thúc sau:</span>
+    <div class="cd-row">
+      <div class="cd-unit"><span id="cdHours">11</span><small>Giờ</small></div>
+      <span class="cd-colon">:</span>
+      <div class="cd-unit"><span id="cdMins">59</span><small>Phút</small></div>
+      <span class="cd-colon">:</span>
+      <div class="cd-unit"><span id="cdSecs">49</span><small>Giây</small></div>
+      <a class="cd-btn" href="#order-form" onclick="document.getElementById('order-form').scrollIntoView({behavior:'smooth'});return false;">MUA NGAY</a>
+    </div>
+  </div>
+
+  <div class="price-box">
+    <span class="price-now">790.000đ</span>
+    <span class="price-was">1.200.000đ</span>
+    <span class="price-badge">-34%</span>
+  </div>
+
   <div class="trust-row">
-    <span class="trust-item"><span class="trust-dot"></span>Freeship toàn quốc</span>
-    <span class="trust-item"><span class="trust-dot"></span>COD — nhận hàng mới trả</span>
-    <span class="trust-item"><span class="trust-dot"></span>Đổi trả 7 ngày</span>
+    <span class="trust-item">Freeship toàn quốc</span>
+    <span class="trust-item">COD — nhận hàng mới trả</span>
+    <span class="trust-item">Đổi trả 7 ngày</span>
+  </div>
+
+  <div class="info-box">
+    <div class="info-box-title">Thông tin sản phẩm:</div>
+    <p>+ Chất liệu: Upper lưới Mesh 3D thoáng khí, không bí chân<br>
+       + Đế: EVA siêu nhẹ, giảm sốc, bám đường tốt<br>
+       + Full size: 39 – 44<br>
+       + Phù hợp: Chạy bộ, gym, đi chơi, dạo phố</p>
   </div>
 </div>
 
+<div class="sale-banner">ƯU ĐÃI LÊN TỚI 34% — CHỈ HÔM NAY</div>
+
 <!-- FEATURES -->
-<div class="section">
-  <div class="divider"></div>
+<div class="features-section">
   <div class="section-title">Tại sao chọn Ultra Run Pro?</div>
   <div class="features">
-    <div class="feat-card">
-      <div class="feat-icon">🏃</div>
-      <div class="feat-title">Đế EVA siêu nhẹ</div>
-      <div class="feat-desc">Giảm shock tối ưu, bảo vệ khớp gối khi chạy dài</div>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon">💨</div>
-      <div class="feat-title">Upper thoáng khí</div>
-      <div class="feat-desc">Lưới mesh 3D, không bí chân suốt ngày dài</div>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon">⚡</div>
-      <div class="feat-title">Bám đường tốt</div>
-      <div class="feat-desc">Đế ngoài pattern đa hướng, ổn định mọi bề mặt</div>
-    </div>
-    <div class="feat-card">
-      <div class="feat-icon">💪</div>
-      <div class="feat-title">Thiết kế thể thao</div>
-      <div class="feat-desc">Phối đồ linh hoạt: gym, chạy bộ đến cafe cuối tuần</div>
-    </div>
+    <div class="feat-card"><div class="feat-icon">🏃</div><div class="feat-title">Đế EVA siêu nhẹ</div><div class="feat-desc">Giảm shock tối ưu, bảo vệ khớp gối khi chạy dài</div></div>
+    <div class="feat-card"><div class="feat-icon">💨</div><div class="feat-title">Upper thoáng khí</div><div class="feat-desc">Lưới mesh 3D, không bí chân suốt ngày dài</div></div>
+    <div class="feat-card"><div class="feat-icon">⚡</div><div class="feat-title">Bám đường tốt</div><div class="feat-desc">Đế ngoài pattern đa hướng, ổn định mọi bề mặt</div></div>
+    <div class="feat-card"><div class="feat-icon">💪</div><div class="feat-title">Thiết kế thể thao</div><div class="feat-desc">Phối đồ linh hoạt: gym, chạy bộ đến cafe cuối tuần</div></div>
   </div>
 </div>
 
 <!-- SIZE -->
-<div class="section section-alt">
-  <div class="divider"></div>
+<div class="size-section">
   <div class="section-title">Chọn size của bạn</div>
   <div class="size-grid">
     <div class="size-btn" onclick="selectSize(this,'39')">39</div>
@@ -150,95 +220,68 @@
     <div class="size-btn" onclick="selectSize(this,'42')">42</div>
     <div class="size-btn" onclick="selectSize(this,'43')">43</div>
     <div class="size-btn" onclick="selectSize(this,'44')">44</div>
-    <div class="size-btn" onclick="selectSize(this,'45')">45</div>
   </div>
-  <p class="size-note">* Bàn chân nở nên chọn size lớn hơn 0.5</p>
-</div>
-
-<!-- REVIEWS -->
-<div class="section">
-  <div class="divider"></div>
-  <div class="section-title">Khách hàng nói gì?</div>
-  <div class="reviews">
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p class="review-text">"Đặt lúc 10h tối, sáng hôm sau có hàng luôn. Giày nhẹ, chạy cảm giác tốt, size chuẩn với bảng size."</p>
-      <div class="reviewer">
-        <div class="avatar">TN</div>
-        <div><div class="rev-name">Trần Nguyên</div><div class="rev-meta">Hà Nội · 2 ngày trước</div></div>
-      </div>
-    </div>
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p class="review-text">"Mua size 42, vừa đẹp. Đế bám tốt, tập gym thoải mái. Giá này chất lượng quá ổn, sẽ mua thêm."</p>
-      <div class="reviewer">
-        <div class="avatar">MH</div>
-        <div><div class="rev-name">Minh Hoàng</div><div class="rev-meta">TP.HCM · 5 ngày trước</div></div>
-      </div>
-    </div>
-    <div class="review-card">
-      <div class="stars">★★★★☆</div>
-      <p class="review-text">"Đổi từ màu trắng sang đen, shop hỗ trợ nhiệt tình. Chất lượng ổn, chắc chắn quay lại mua."</p>
-      <div class="reviewer">
-        <div class="avatar">PT</div>
-        <div><div class="rev-name">Phúc Toàn</div><div class="rev-meta">Đà Nẵng · 1 tuần trước</div></div>
-      </div>
-    </div>
-  </div>
+  <p class="size-note">* Bàn chân nở nên chọn size lớn hơn 0.5 — Xem bảng size ảnh cuối</p>
 </div>
 
 <!-- ORDER FORM -->
-<div class="order-form-wrap">
+<div class="order-section" id="order-form">
   <div class="order-form">
-    <div class="form-title">Đặt hàng ngay</div>
+    <div class="form-title">THÔNG TIN MUA HÀNG</div>
     <p class="form-sub">Điền form → shop gọi xác nhận → nhận hàng thanh toán</p>
-    <div class="form-group">
-      <label class="form-label">Họ và tên</label>
-      <input class="form-input" type="text" id="inputName" placeholder="Nguyễn Văn A" />
-    </div>
-    <div class="form-group">
-      <label class="form-label">Số điện thoại</label>
-      <input class="form-input" type="tel" id="inputPhone" placeholder="0912 345 678" />
-    </div>
-    <div class="form-group">
-      <label class="form-label">Size giày</label>
+    <div class="form-group"><label class="form-label">Họ và tên:</label><input class="form-input" type="text" id="inputName" placeholder="Họ và Tên" /></div>
+    <div class="form-group"><label class="form-label">Số điện thoại:</label><input class="form-input" type="tel" id="inputPhone" placeholder="Số điện thoại" /></div>
+    <div class="form-group"><label class="form-label">Chi tiết địa chỉ:</label><input class="form-input" type="text" id="inputAddr" placeholder="Số nhà, đường, quận/huyện, tỉnh/TP" /></div>
+    <div class="form-group"><label class="form-label">Size giày:</label>
       <select class="form-select" id="inputSize">
         <option value="">— Chọn size —</option>
-        <option value="39">39</option>
-        <option value="40">40</option>
-        <option value="41">41</option>
-        <option value="42">42</option>
-        <option value="43">43</option>
-        <option value="44">44</option>
-        <option value="45">45</option>
+        <option value="39">39</option><option value="40">40</option><option value="41">41</option>
+        <option value="42">42</option><option value="43">43</option><option value="44">44</option>
       </select>
-    </div>
-    <div class="form-group">
-      <label class="form-label">Địa chỉ nhận hàng</label>
-      <input class="form-input" type="text" id="inputAddr" placeholder="Số nhà, đường, quận/huyện, tỉnh/TP" />
     </div>
     <button class="submit-btn" onclick="submitOrder()">ĐẶT HÀNG — THANH TOÁN KHI NHẬN</button>
     <div class="cod-row">
-      <span class="cod-item">✓ COD toàn quốc</span>
-      <span class="cod-item">·</span>
-      <span class="cod-item">✓ Freeship nội ô</span>
-      <span class="cod-item">·</span>
+      <span class="cod-item">✓ COD toàn quốc</span><span class="cod-item">·</span>
+      <span class="cod-item">✓ Freeship nội ô</span><span class="cod-item">·</span>
       <span class="cod-item">✓ Đổi size miễn phí</span>
     </div>
   </div>
 </div>
 
 <!-- GUARANTEE -->
-<div class="section">
-  <div class="guarantee">
+<div class="guarantee-badge">
+  <div class="guarantee-inner">
     <p><strong>Cam kết của shop:</strong> Hàng y hình, đúng mô tả. Nếu không vừa size, liên hệ đổi trong <strong>7 ngày</strong> miễn phí. Giao hàng <strong>1–3 ngày</strong> toàn quốc.</p>
   </div>
 </div>
 
-<!-- STICKY CTA -->
-<div class="sticky-cta">
-  <p>⏰ Flash sale kết thúc hôm nay — còn <strong id="stockCount">17</strong> đôi</p>
-  <button onclick="document.querySelector('.order-form-wrap').scrollIntoView({behavior:'smooth'})">ĐẶT HÀNG NGAY</button>
+<!-- REVIEWS -->
+<div class="reviews-section">
+  <div class="section-title">Khách hàng nói gì?</div>
+  <div class="reviews">
+    <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"Đặt lúc 10h tối, sáng hôm sau có hàng luôn. Giày nhẹ, chạy cảm giác tốt, size chuẩn với bảng size."</p><div class="reviewer"><div class="avatar">TN</div><div><div class="rev-name">Trần Nguyên</div><div class="rev-meta">Hà Nội · 2 ngày trước</div></div></div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"Mua size 42, vừa đẹp. Đế bám tốt, tập gym thoải mái. Giá này chất lượng quá ổn, sẽ mua thêm."</p><div class="reviewer"><div class="avatar">MH</div><div><div class="rev-name">Minh Hoàng</div><div class="rev-meta">TP.HCM · 5 ngày trước</div></div></div></div>
+    <div class="review-card"><div class="stars">★★★★☆</div><p class="review-text">"Đổi từ màu trắng sang đen, shop hỗ trợ nhiệt tình. Chất lượng ổn, chắc chắn quay lại mua."</p><div class="reviewer"><div class="avatar">PT</div><div><div class="rev-name">Phúc Toàn</div><div class="rev-meta">Đà Nẵng · 1 tuần trước</div></div></div></div>
+  </div>
+</div>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar">
+  <a class="messenger-btn" href="https://m.me/subistore" target="_blank">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="#f07820"><path d="M12 2C6.477 2 2 6.145 2 11.259c0 2.861 1.404 5.417 3.604 7.1V22l3.286-1.806C9.875 20.38 10.916 20.519 12 20.519c5.523 0 10-4.145 10-9.26C22 6.145 17.523 2 12 2zm1.018 12.472l-2.554-2.724-4.983 2.724 5.483-5.822 2.617 2.724 4.92-2.724-5.483 5.822z"/></svg>
+    Nhắn tin
+  </a>
+  <button class="order-btn" onclick="document.getElementById('order-form').scrollIntoView({behavior:'smooth'})">MUA NGAY</button>
+</div>
+
+<!-- SOCIAL PROOF -->
+<div class="social-proof hide" id="socialProof">
+  <div class="sp-avatar" id="spAvatar">TN</div>
+  <div class="sp-text">
+    <strong id="spName">Trần Nguyên</strong>
+    <span id="spMsg">đã đặt 1 đôi size 42</span>
+    <div class="sp-time" id="spTime">2 phút trước</div>
+  </div>
 </div>
 
 <!-- SUCCESS MODAL -->
@@ -252,60 +295,149 @@
 </div>
 
 <script>
-  let selectedSize = '';
+  // ---- CAROUSEL ----
+  var IMAGES = [
+    "img1.jpg",
+    "img2.jpg",
+    "img3.jpg",
+    "img4.jpg",
+    "img5.jpg",
+    "img6.jpg"
+  ];
 
+  var track = document.getElementById('carouselTrack');
+  var dotsEl = document.getElementById('carouselDots');
+  var thumbEl = document.getElementById('thumbStrip');
+  var current = 0;
+
+  IMAGES.forEach(function(src, i) {
+    // slide
+    var slide = document.createElement('div');
+    slide.className = 'carousel-slide';
+    var img = document.createElement('img');
+    if(i===0){img.src=src;}else{img.dataset.src=src;}
+    img.alt = 'Ultra Run Pro 2025 - ảnh ' + (i+1);
+    slide.appendChild(img);
+    track.appendChild(slide);
+
+    // dot
+    var dot = document.createElement('div');
+    dot.className = 'carousel-dot' + (i===0?' active':'');
+    dot.onclick = function(){ goTo(i); };
+    dotsEl.appendChild(dot);
+
+    // thumb
+    var thumb = document.createElement('div');
+    thumb.className = 'thumb' + (i===0?' active':'');
+    var timg = document.createElement('img');
+    if(i===0){timg.src=src;}else{timg.dataset.src=src;}
+    timg.alt = '';
+    thumb.appendChild(timg);
+    thumb.onclick = function(){ goTo(i); };
+    thumbEl.appendChild(thumb);
+  });
+
+  function goTo(idx) {
+    current = idx;
+    track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+    document.querySelectorAll('.carousel-dot').forEach(function(d,i){ d.classList.toggle('active', i===idx); });
+    document.querySelectorAll('.thumb').forEach(function(t,i){ t.classList.toggle('active', i===idx); });
+    // Lazy load current + preload next
+    var slideImgs = track.querySelectorAll('.carousel-slide img');
+    var thumbImgs = thumbEl.querySelectorAll('.thumb img');
+    [idx, (idx+1)%IMAGES.length].forEach(function(j){
+      if(slideImgs[j] && slideImgs[j].dataset.src){
+        slideImgs[j].src = slideImgs[j].dataset.src;
+        delete slideImgs[j].dataset.src;
+      }
+      if(thumbImgs[j] && thumbImgs[j].dataset.src){
+        thumbImgs[j].src = thumbImgs[j].dataset.src;
+        delete thumbImgs[j].dataset.src;
+      }
+    });
+    // scroll thumb into view
+    var thumbs = thumbEl.querySelectorAll('.thumb');
+    if (thumbs[idx]) thumbs[idx].scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+  }
+
+  document.getElementById('prevBtn').onclick = function(){ goTo((current - 1 + IMAGES.length) % IMAGES.length); };
+  document.getElementById('nextBtn').onclick = function(){ goTo((current + 1) % IMAGES.length); };
+
+  // Touch/swipe
+  var startX = 0;
+  var main = document.getElementById('carouselMain');
+  main.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
+  main.addEventListener('touchend', function(e){
+    var dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) { dx < 0 ? goTo((current+1)%IMAGES.length) : goTo((current-1+IMAGES.length)%IMAGES.length); }
+  }, {passive:true});
+
+  // Auto-play every 4s
+  setInterval(function(){ goTo((current+1)%IMAGES.length); }, 4000);
+
+  // ---- COUNTDOWN ----
+  (function() {
+    var end = new Date(); end.setHours(23,59,59,0);
+    function tick() {
+      var diff = Math.max(0, Math.floor((end - new Date()) / 1000));
+      var h = Math.floor(diff/3600), m = Math.floor((diff%3600)/60), s = diff%60;
+      document.getElementById('cdHours').textContent = String(h).padStart(2,'0');
+      document.getElementById('cdMins').textContent  = String(m).padStart(2,'0');
+      document.getElementById('cdSecs').textContent  = String(s).padStart(2,'0');
+    }
+    tick(); setInterval(tick, 1000);
+  })();
+
+  // ---- SOCIAL PROOF ----
+  var socialData = [
+    {init:'TN', name:'Trần Nguyên',  msg:'đã đặt 1 đôi size 42 · Hà Nội',   time:'2 phút trước'},
+    {init:'MH', name:'Minh Hoàng',   msg:'đã đặt 1 đôi size 41 · TP.HCM',   time:'5 phút trước'},
+    {init:'PT', name:'Phúc Toàn',    msg:'đã đặt 1 đôi size 43 · Đà Nẵng',  time:'8 phút trước'},
+    {init:'LH', name:'Lê Hùng',      msg:'đã đặt 1 đôi size 40 · Cần Thơ',  time:'12 phút trước'},
+    {init:'VT', name:'Văn Thắng',    msg:'đã đặt 1 đôi size 44 · Hải Phòng', time:'15 phút trước'},
+  ];
+  var spIdx = 0;
+  function showSP() {
+    var d = socialData[spIdx++ % socialData.length];
+    document.getElementById('spAvatar').textContent = d.init;
+    document.getElementById('spName').textContent   = d.name;
+    document.getElementById('spMsg').textContent    = d.msg;
+    document.getElementById('spTime').textContent   = d.time;
+    var el = document.getElementById('socialProof');
+    el.classList.remove('hide');
+    setTimeout(function(){ el.classList.add('hide'); }, 3500);
+  }
+  setTimeout(function(){ showSP(); setInterval(showSP, 8000); }, 3000);
+
+  // ---- SIZE ----
+  var selectedSize = '';
   function selectSize(el, size) {
-    document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('sel'));
+    document.querySelectorAll('.size-btn').forEach(function(b){ b.classList.remove('sel'); });
     el.classList.add('sel');
     selectedSize = size;
     document.getElementById('inputSize').value = size;
   }
 
+  // ---- ORDER ----
   function showSuccess() {
     document.getElementById('successModal').classList.add('show');
-    document.getElementById('inputName').value = '';
-    document.getElementById('inputPhone').value = '';
-    document.getElementById('inputSize').value = '';
-    document.getElementById('inputAddr').value = '';
-    document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('sel'));
-    const s = document.getElementById('stockCount');
-    if (s && parseInt(s.textContent) > 1) s.textContent = parseInt(s.textContent) - 1;
+    ['inputName','inputPhone','inputSize','inputAddr'].forEach(function(id){ document.getElementById(id).value=''; });
+    document.querySelectorAll('.size-btn').forEach(function(b){ b.classList.remove('sel'); });
+    selectedSize = '';
   }
 
   async function submitOrder() {
-    const name = document.getElementById('inputName').value.trim();
-    const phone = document.getElementById('inputPhone').value.trim();
-    const size = document.getElementById('inputSize').value;
-    const addr = document.getElementById('inputAddr').value.trim();
-    if (!name || !phone || !size || !addr) {
-      alert('Vui lòng điền đầy đủ thông tin nhé!');
-      return;
-    }
-
-    const btn = document.querySelector('.submit-btn');
-    btn.textContent = 'ĐANG GỬI ĐƠN...';
-    btn.disabled = true;
-
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzjuJbeb6LkpOzPlb7AETxEDSIIA5ZWrlHk5fiGLyiYNkJ38ZHKYrfi8pGXRMMljX6Avg/exec';
-
-    // Dung URL params de tranh CORS - Google Apps Script ho tro cach nay
-    const params = new URLSearchParams({
-      ho_ten: name,
-      so_dien_thoai: phone,
-      size_giay: size,
-      dia_chi: addr,
-      san_pham: 'Ultra Run Pro 2025 - 790.000đ'
-    });
-
-    try {
-      await fetch(SCRIPT_URL + '?' + params.toString(), {
-        method: 'GET',
-        mode: 'no-cors'
-      });
-    } catch(e) {}
-
-    btn.textContent = 'ĐẶT HÀNG — THANH TOÁN KHI NHẬN';
-    btn.disabled = false;
+    var name  = document.getElementById('inputName').value.trim();
+    var phone = document.getElementById('inputPhone').value.trim();
+    var size  = document.getElementById('inputSize').value;
+    var addr  = document.getElementById('inputAddr').value.trim();
+    if (!name||!phone||!size||!addr) { alert('Vui lòng điền đầy đủ thông tin nhé!'); return; }
+    var btn = document.querySelector('.submit-btn');
+    btn.textContent = 'ĐANG GỬI ĐƠN...'; btn.disabled = true;
+    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzjuJbeb6LkpOzPlb7AETxEDSIIA5ZWrlHk5fiGLyiYNkJ38ZHKYrfi8pGXRMMljX6Avg/exec';
+    var params = new URLSearchParams({ho_ten:name, so_dien_thoai:phone, size_giay:size, dia_chi:addr, san_pham:'Ultra Run Pro 2025 - 790.000đ'});
+    try { await fetch(SCRIPT_URL+'?'+params, {method:'GET',mode:'no-cors'}); } catch(e){}
+    btn.textContent = 'ĐẶT HÀNG — THANH TOÁN KHI NHẬN'; btn.disabled = false;
     showSuccess();
   }
 </script>
