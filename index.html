@@ -3,23 +3,47 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ultra Run Pro 2025 — SUBI STORE</title>
+<meta name="facebook-domain-verification" content="ssr88ye94n9uzueqeg232t3l7tnk51" />
+<title>Ultra Run Pro 2026 — SUBI STORE</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3209318139254957');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3209318139254957&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-width: 480px; margin: 0 auto; padding-bottom: 72px; }
 
 /* HEADER */
-.header { background: linear-gradient(135deg, #f07820 0%, #e05a00 100%); padding: 10px 20px; display: flex; align-items: center; gap: 12px; }
-.header-logo { height: 45px; width: auto; display: block; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2)); }
-.header-tagline-text { font-size: 12px; color: rgba(255,255,255,0.88); letter-spacing: 0.5px; font-style: italic; font-family: 'Barlow', sans-serif; }
+.header { background: linear-gradient(135deg, #f07820 0%, #e05a00 100%); height: 65px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.header-logo { height: 100%; width: auto; display: block; position: absolute; top: 0; left: 0; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2)); animation: logoPulse 2.5s ease-in-out infinite; }
+@keyframes logoPulse {
+  0%, 100% { transform: scale(1);   filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2)); }
+  50%       { transform: scale(1.08); filter: drop-shadow(0 2px 8px rgba(255,255,255,0.5)); }
+}
+.header-text-group { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.header-brand-name { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: #fff; letter-spacing: 2px; line-height: 1; text-shadow: 0 1px 4px rgba(0,0,0,0.25); }
+.header-tagline-text { font-size: 12px; color: rgba(255,255,255,0.88); letter-spacing: 0.5px; font-style: italic; font-family: 'Barlow', sans-serif; margin-top: 2px; }
 
 /* CAROUSEL */
 .carousel-wrap { background: #fff; position: relative; user-select: none; }
 .carousel-main { overflow: hidden; position: relative; }
 .carousel-track { display: flex; transition: transform 0.35s ease; will-change: transform; }
 .carousel-slide { flex: 0 0 100%; }
-.carousel-slide img { width: 100%; aspect-ratio: 3/4; object-fit: contain; background: #fff; display: block; }
+.carousel-slide img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
 .carousel-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.3); color: #fff; border: none; width: 34px; height: 34px; border-radius: 50%; font-size: 16px; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; }
 .carousel-arrow.prev { left: 8px; }
 .carousel-arrow.next { right: 8px; }
@@ -82,6 +106,17 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
 .size-btn:hover, .size-btn.sel { border-color: #f07820; color: #f07820; background: #fff5ee; }
 .size-note { font-size: 11px; color: #999; margin-top: 10px; }
 
+/* COLOR SELECTOR */
+.color-section { margin-top: 16px; }
+.color-label { font-weight: 700; font-size: 14px; color: #222; margin-bottom: 10px; }
+.color-options { display: flex; gap: 12px; flex-wrap: wrap; }
+.color-option { display: flex; flex-direction: column; align-items: center; gap: 6px; cursor: pointer; }
+.color-thumb { width: 72px; height: 72px; border-radius: 8px; overflow: hidden; border: 2.5px solid #ddd; transition: border-color 0.15s; }
+.color-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.color-option.sel .color-thumb { border-color: #f07820; box-shadow: 0 0 0 2px #f0782044; }
+.color-name { font-size: 12px; color: #555; font-weight: 600; }
+.color-option.sel .color-name { color: #f07820; }
+
 /* REVIEWS */
 .reviews-section { background: #fff; padding: 16px; border-top: 8px solid #f5f5f5; }
 .reviews { display: flex; flex-direction: column; gap: 10px; }
@@ -92,6 +127,16 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
 .avatar { width: 30px; height: 30px; border-radius: 50%; background: #f07820; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0; }
 .rev-name { font-size: 12px; font-weight: 700; color: #222; }
 .rev-meta { font-size: 11px; color: #aaa; }
+
+/* VIDEO */
+.video-section { background: #fff; padding: 16px; border-top: 8px solid #f5f5f5; }
+.video-wrap { position: relative; border-radius: 10px; overflow: hidden; background: #000; }
+.video-wrap video { width: 100%; display: block; max-height: 480px; object-fit: cover; }
+.video-play-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.25); cursor: pointer; transition: background 0.2s; }
+.video-play-overlay:hover { background: rgba(0,0,0,0.15); }
+.video-play-overlay.hidden { display: none; }
+.play-btn { width: 60px; height: 60px; border-radius: 50%; background: rgba(240,120,32,0.92); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
+.play-btn svg { margin-left: 4px; }
 
 /* GUARANTEE */
 .guarantee-badge { background: #fff; padding: 16px; border-top: 8px solid #f5f5f5; }
@@ -115,13 +160,35 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
 .cod-row { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
 .cod-item { font-size: 11px; color: #888; }
 
+/* SHOP INFO FOOTER */
+.shop-footer { background: #f0f0f0; padding: 20px 16px; border-top: 8px solid #f5f5f5; }
+.shop-footer-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1.5px solid #ddd; }
+.shop-footer-logo { height: 52px; width: auto; }
+.shop-footer-name { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: #222; letter-spacing: 1.5px; text-decoration: underline; text-underline-offset: 4px; }
+.shop-info-block { margin-bottom: 16px; }
+.shop-info-title { font-family: 'Barlow', sans-serif; font-weight: 800; font-size: 15px; color: #222; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+.shop-info-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+.shop-info-icon { width: 28px; height: 28px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.shop-info-icon svg { width: 22px; height: 22px; }
+.shop-info-text { font-size: 13px; color: #333; line-height: 1.5; padding-top: 4px; }
+.shop-info-text strong { color: #222; }
+.shop-info-block-contact { background: #f07820; border-radius: 10px; padding: 14px 14px 6px; margin-bottom: 16px; }
+.shop-info-block-contact .shop-info-title { color: #fff; }
+.shop-info-block-contact .shop-info-text { color: #fff; }
+.shop-info-block-contact .shop-info-text strong { color: #fff; }
+.shop-info-block-contact .shop-info-icon svg { fill: #fff; }
+.policy-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+.policy-icon { width: 36px; height: 36px; background: #f07820; border-radius: 6px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.policy-icon svg { width: 20px; height: 20px; fill: #fff; }
+.policy-text { font-size: 13px; color: #333; line-height: 1.5; padding-top: 8px; }
+
 /* STICKY BAR */
 .sticky-bar { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 480px; background: linear-gradient(135deg, #f07820, #e05a00); padding: 10px 16px; display: flex; gap: 10px; align-items: center; z-index: 100; }
 .messenger-btn { background: #fff; color: #f07820; border: none; border-radius: 8px; padding: 11px 14px; font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 6px; cursor: pointer; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
 .order-btn { flex: 1; background: #fff; color: #f07820; font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 1px; border: none; border-radius: 8px; padding: 12px; cursor: pointer; }
 
 /* SOCIAL PROOF */
-.social-proof { position: fixed; bottom: 80px; left: calc(50% - 240px); background: #fff; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); padding: 10px 14px; display: flex; align-items: center; gap: 10px; z-index: 99; max-width: 260px; animation: slideIn 0.4s ease; }
+.social-proof { position: fixed; bottom: 80px; left: 16px; right: 16px; max-width: 300px; background: #fff; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); padding: 10px 14px; display: flex; align-items: center; gap: 10px; z-index: 99; animation: slideIn 0.4s ease; }
 .social-proof.hide { display: none; }
 @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .sp-avatar { width: 36px; height: 36px; border-radius: 50%; background: #f07820; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0; }
@@ -143,8 +210,11 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
 
 <!-- HEADER -->
 <div class="header">
-  <img src="data:image/png;base64,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" class="header-logo" alt="SUBI STORE" />
-  <div class="header-tagline-text">Giày Thể Thao Chính Hãng</div>
+  <img src="logo.png" class="header-logo" alt="SUBI STORE" />
+  <div class="header-text-group">
+    <div class="header-brand-name">SUBI SNEAKER</div>
+    <div class="header-tagline-text">Giày Thể Thao Chính Hãng</div>
+  </div>
 </div>
 
 <!-- CAROUSEL -->
@@ -162,7 +232,7 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
 
 <!-- PRODUCT SECTION -->
 <div class="product-section">
-  <h1 class="product-title">Giày Thể Thao Nam Cao Cấp<strong>ULTRA RUN PRO 2025</strong></h1>
+  <h1 class="product-title">Giày Thể Thao Nam Cao Cấp<strong>ULTRA RUN PRO 2026</strong></h1>
 
   <div class="countdown-box">
     <span class="cd-label">Chương trình kết thúc sau:</span>
@@ -177,9 +247,9 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
   </div>
 
   <div class="price-box">
-    <span class="price-now">790.000đ</span>
-    <span class="price-was">1.200.000đ</span>
-    <span class="price-badge">-34%</span>
+    <span class="price-now">250.000đ</span>
+    <span class="price-was">360.000đ</span>
+    <span class="price-badge">-30%</span>
   </div>
 
   <div class="trust-row">
@@ -197,7 +267,20 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
   </div>
 </div>
 
-<div class="sale-banner">ƯU ĐÃI LÊN TỚI 34% — CHỈ HÔM NAY</div>
+<!-- VIDEO -->
+<div class="video-section">
+  <div class="section-title">Video sản phẩm thực tế</div>
+  <div class="video-wrap" id="videoWrap">
+    <video id="productVideo" src="video.mp4" playsinline preload="metadata" poster="img1.jpg" loop></video>
+    <div class="video-play-overlay" id="videoOverlay" onclick="playVideo()">
+      <div class="play-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sale-banner">ƯU ĐÃI LÊN TỚI 30% — CHỈ HÔM NAY</div>
 
 <!-- FEATURES -->
 <div class="features-section">
@@ -222,6 +305,7 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
     <div class="size-btn" onclick="selectSize(this,'44')">44</div>
   </div>
   <p class="size-note">* Bàn chân nở nên chọn size lớn hơn 0.5 — Xem bảng size ảnh cuối</p>
+
 </div>
 
 <!-- ORDER FORM -->
@@ -238,6 +322,19 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
         <option value="39">39</option><option value="40">40</option><option value="41">41</option>
         <option value="42">42</option><option value="43">43</option><option value="44">44</option>
       </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Màu sắc:</label>
+      <div class="color-options">
+        <div class="color-option" onclick="selectColor(this,'Xanh rêu')" id="color-xanhreu">
+          <div class="color-thumb"><img src="color-xanhreu.jpg" alt="Xanh rêu" /></div>
+          <span class="color-name">Xanh rêu</span>
+        </div>
+        <div class="color-option" onclick="selectColor(this,'Xanh than')" id="color-xanhthan">
+          <div class="color-thumb"><img src="color-xanhthan.jpg" alt="Xanh than" /></div>
+          <span class="color-name">Xanh than</span>
+        </div>
+      </div>
     </div>
     <button class="submit-btn" onclick="submitOrder()">ĐẶT HÀNG — THANH TOÁN KHI NHẬN</button>
     <div class="cod-row">
@@ -262,12 +359,55 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
     <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"Đặt lúc 10h tối, sáng hôm sau có hàng luôn. Giày nhẹ, chạy cảm giác tốt, size chuẩn với bảng size."</p><div class="reviewer"><div class="avatar">TN</div><div><div class="rev-name">Trần Nguyên</div><div class="rev-meta">Hà Nội · 2 ngày trước</div></div></div></div>
     <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"Mua size 42, vừa đẹp. Đế bám tốt, tập gym thoải mái. Giá này chất lượng quá ổn, sẽ mua thêm."</p><div class="reviewer"><div class="avatar">MH</div><div><div class="rev-name">Minh Hoàng</div><div class="rev-meta">TP.HCM · 5 ngày trước</div></div></div></div>
     <div class="review-card"><div class="stars">★★★★☆</div><p class="review-text">"Đổi từ màu trắng sang đen, shop hỗ trợ nhiệt tình. Chất lượng ổn, chắc chắn quay lại mua."</p><div class="reviewer"><div class="avatar">PT</div><div><div class="rev-name">Phúc Toàn</div><div class="rev-meta">Đà Nẵng · 1 tuần trước</div></div></div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"Giày đẹp hơn ảnh, đóng gói cẩn thận. Mang thử đi bộ cả ngày không đau chân, rất hài lòng!"</p><div class="reviewer"><div class="avatar">NL</div><div><div class="rev-name">Ngọc Linh</div><div class="rev-meta">Hải Phòng · 3 ngày trước</div></div></div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><p class="review-text">"Mua tặng bạn trai, bạn ấy thích lắm. Đặt lúc chiều, tối shop xác nhận ngay, giao nhanh. Sẽ ủng hộ shop dài dài."</p><div class="reviewer"><div class="avatar">TH</div><div><div class="rev-name">Thu Hà</div><div class="rev-meta">Hà Nội · 4 ngày trước</div></div></div></div>
+  </div>
+</div>
+
+<!-- SHOP INFO FOOTER -->
+<div class="shop-footer">
+
+
+  <div class="shop-info-block-contact">
+    <div class="shop-info-title">Thông tin liên hệ:</div>
+    <div class="shop-info-row">
+      <div class="shop-info-icon"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+      <div class="shop-info-text"><strong>Địa chỉ:</strong> Đan Phượng - Hà Nội</div>
+    </div>
+    <div class="shop-info-row">
+      <div class="shop-info-icon"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.18 21 3 13.82 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg></div>
+      <div class="shop-info-text"><strong>Hotline:</strong> 0387135891</div>
+    </div>
+    <div class="shop-info-row">
+      <div class="shop-info-icon"><svg viewBox="0 0 24 24" fill="#fff"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+      <div class="shop-info-text"><strong>Email:</strong> subisneaker@gmail.com</div>
+    </div>
+  </div>
+
+  <div class="shop-info-block">
+    <div class="shop-info-title">Chính sách bán hàng</div>
+    <div class="policy-row">
+      <div class="policy-icon"><svg viewBox="0 0 24 24"><path d="M17 8h2a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8a2 2 0 012-2h2V6a5 5 0 0110 0v2zm-6 7.73V17h2v-1.27a2 2 0 10-2 0zM15 8V6a3 3 0 00-6 0v2h6z"/></svg></div>
+      <div class="policy-text">Miễn phí đổi size khi không vừa</div>
+    </div>
+    <div class="policy-row">
+      <div class="policy-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3-3 1.41-1.41L11 12.17l4.59-4.58L17 9l-6 6z"/></svg></div>
+      <div class="policy-text">Kiểm tra và mặc thử trước khi thanh toán</div>
+    </div>
+    <div class="policy-row">
+      <div class="policy-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg></div>
+      <div class="policy-text">Hỗ trợ thông tin 247 (hotline)</div>
+    </div>
+    <div class="policy-row">
+      <div class="policy-icon"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg></div>
+      <div class="policy-text">Đổi trả trong 7 ngày (Yêu cầu sản phẩm còn nguyên tem tag)</div>
+    </div>
   </div>
 </div>
 
 <!-- STICKY BAR -->
 <div class="sticky-bar">
-  <a class="messenger-btn" href="https://m.me/subistore" target="_blank">
+  <a class="messenger-btn" href="https://www.facebook.com/profile.php?id=61570114722211" target="_blank">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="#f07820"><path d="M12 2C6.477 2 2 6.145 2 11.259c0 2.861 1.404 5.417 3.604 7.1V22l3.286-1.806C9.875 20.38 10.916 20.519 12 20.519c5.523 0 10-4.145 10-9.26C22 6.145 17.523 2 12 2zm1.018 12.472l-2.554-2.724-4.983 2.724 5.483-5.822 2.617 2.724 4.92-2.724-5.483 5.822z"/></svg>
     Nhắn tin
   </a>
@@ -302,7 +442,10 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
     "img3.jpg",
     "img4.jpg",
     "img5.jpg",
-    "img6.jpg"
+    "img6.jpg",
+    "img7.jpg",
+    "img8.jpg",
+    "img9.jpg"
   ];
 
   var track = document.getElementById('carouselTrack');
@@ -316,7 +459,7 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
     slide.className = 'carousel-slide';
     var img = document.createElement('img');
     if(i===0){img.src=src;}else{img.dataset.src=src;}
-    img.alt = 'Ultra Run Pro 2025 - ảnh ' + (i+1);
+    img.alt = 'Ultra Run Pro 2026 - ảnh ' + (i+1);
     slide.appendChild(img);
     track.appendChild(slide);
 
@@ -355,9 +498,12 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
         delete thumbImgs[j].dataset.src;
       }
     });
-    // scroll thumb into view
+    // scroll thumb horizontally within strip only (never affects page scroll)
     var thumbs = thumbEl.querySelectorAll('.thumb');
-    if (thumbs[idx]) thumbs[idx].scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+    if (thumbs[idx]) {
+      var t = thumbs[idx];
+      thumbEl.scrollLeft = t.offsetLeft - (thumbEl.offsetWidth / 2) + (t.offsetWidth / 2);
+    }
   }
 
   document.getElementById('prevBtn').onclick = function(){ goTo((current - 1 + IMAGES.length) % IMAGES.length); };
@@ -390,11 +536,21 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
 
   // ---- SOCIAL PROOF ----
   var socialData = [
-    {init:'TN', name:'Trần Nguyên',  msg:'đã đặt 1 đôi size 42 · Hà Nội',   time:'2 phút trước'},
-    {init:'MH', name:'Minh Hoàng',   msg:'đã đặt 1 đôi size 41 · TP.HCM',   time:'5 phút trước'},
-    {init:'PT', name:'Phúc Toàn',    msg:'đã đặt 1 đôi size 43 · Đà Nẵng',  time:'8 phút trước'},
-    {init:'LH', name:'Lê Hùng',      msg:'đã đặt 1 đôi size 40 · Cần Thơ',  time:'12 phút trước'},
-    {init:'VT', name:'Văn Thắng',    msg:'đã đặt 1 đôi size 44 · Hải Phòng', time:'15 phút trước'},
+    {init:'TN', name:'Trần Nguyên',  msg:'đã đặt 1 đôi size 42 · Hà Nội',      time:'2 phút trước'},
+    {init:'MH', name:'Minh Hoàng',   msg:'đã đặt 1 đôi size 41 · TP.HCM',      time:'5 phút trước'},
+    {init:'PT', name:'Phúc Toàn',    msg:'đã đặt 1 đôi size 43 · Đà Nẵng',     time:'8 phút trước'},
+    {init:'LH', name:'Lê Hùng',      msg:'đã đặt 1 đôi size 40 · Cần Thơ',     time:'12 phút trước'},
+    {init:'VT', name:'Văn Thắng',    msg:'đã đặt 1 đôi size 44 · Hải Phòng',   time:'15 phút trước'},
+    {init:'QD', name:'Quốc Đạt',     msg:'đã đặt 1 đôi size 42 · Bình Dương',  time:'18 phút trước'},
+    {init:'HM', name:'Hải Minh',     msg:'đã đặt 2 đôi size 40 · Hà Nội',      time:'21 phút trước'},
+    {init:'BL', name:'Bảo Long',     msg:'đã đặt 1 đôi size 43 · Nha Trang',   time:'25 phút trước'},
+    {init:'KH', name:'Khắc Huy',     msg:'đã đặt 1 đôi size 41 · Vũng Tàu',    time:'30 phút trước'},
+    {init:'TL', name:'Thanh Lâm',    msg:'đã đặt 1 đôi size 44 · TP.HCM',      time:'34 phút trước'},
+    {init:'ND', name:'Nhật Duy',     msg:'đã đặt 2 đôi size 42 · Hà Nội',      time:'38 phút trước'},
+    {init:'PK', name:'Phi Khánh',    msg:'đã đặt 1 đôi size 39 · Huế',         time:'43 phút trước'},
+    {init:'TV', name:'Tuấn Việt',    msg:'đã đặt 1 đôi size 41 · Đồng Nai',    time:'47 phút trước'},
+    {init:'CH', name:'Công Hiếu',    msg:'đã đặt 1 đôi size 43 · Hải Dương',   time:'52 phút trước'},
+    {init:'DK', name:'Đức Khải',     msg:'đã đặt 1 đôi size 40 · Cần Thơ',     time:'1 giờ trước'},
   ];
   var spIdx = 0;
   function showSP() {
@@ -411,6 +567,8 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
 
   // ---- SIZE ----
   var selectedSize = '';
+  var selectedColor = '';
+
   function selectSize(el, size) {
     document.querySelectorAll('.size-btn').forEach(function(b){ b.classList.remove('sel'); });
     el.classList.add('sel');
@@ -418,12 +576,20 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
     document.getElementById('inputSize').value = size;
   }
 
+  function selectColor(el, color) {
+    document.querySelectorAll('.color-option').forEach(function(c){ c.classList.remove('sel'); });
+    el.classList.add('sel');
+    selectedColor = color;
+  }
+
   // ---- ORDER ----
   function showSuccess() {
     document.getElementById('successModal').classList.add('show');
     ['inputName','inputPhone','inputSize','inputAddr'].forEach(function(id){ document.getElementById(id).value=''; });
     document.querySelectorAll('.size-btn').forEach(function(b){ b.classList.remove('sel'); });
+    document.querySelectorAll('.color-option').forEach(function(c){ c.classList.remove('sel'); });
     selectedSize = '';
+    selectedColor = '';
   }
 
   async function submitOrder() {
@@ -432,13 +598,24 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
     var size  = document.getElementById('inputSize').value;
     var addr  = document.getElementById('inputAddr').value.trim();
     if (!name||!phone||!size||!addr) { alert('Vui lòng điền đầy đủ thông tin nhé!'); return; }
+    if (!selectedColor) { alert('Vui lòng chọn màu giày nhé!'); return; }
     var btn = document.querySelector('.submit-btn');
     btn.textContent = 'ĐANG GỬI ĐƠN...'; btn.disabled = true;
     var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzjuJbeb6LkpOzPlb7AETxEDSIIA5ZWrlHk5fiGLyiYNkJ38ZHKYrfi8pGXRMMljX6Avg/exec';
-    var params = new URLSearchParams({ho_ten:name, so_dien_thoai:phone, size_giay:size, dia_chi:addr, san_pham:'Ultra Run Pro 2025 - 790.000đ'});
+    var params = new URLSearchParams({ho_ten:name, so_dien_thoai:phone, size_giay:size, mau_sac:selectedColor, dia_chi:addr, san_pham:'Ultra Run Pro 2026 - 250.000đ - ' + selectedColor});
     try { await fetch(SCRIPT_URL+'?'+params, {method:'GET',mode:'no-cors'}); } catch(e){}
     btn.textContent = 'ĐẶT HÀNG — THANH TOÁN KHI NHẬN'; btn.disabled = false;
+    fbq('track', 'Purchase', {value: 250000, currency: 'VND', content_name: 'Ultra Run Pro 2026'});
     showSuccess();
+  }
+
+  // ---- VIDEO ----
+  function playVideo() {
+    var vid = document.getElementById('productVideo');
+    var overlay = document.getElementById('videoOverlay');
+    vid.controls = true;
+    vid.play();
+    overlay.classList.add('hidden');
   }
 </script>
 </body>
