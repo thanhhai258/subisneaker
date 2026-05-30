@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -iE \"\\\\.\\(jpg|jpeg|png|webp|gif\\)$\")",
+      "Bash(cp \"/Users/tunbui/Downloads/SUBI-STORE/Ladipage/subisneaker/Screenshot 2026-01-09 at 17.31.00.png\" \"/Users/tunbui/Downloads/SUBI-STORE/Ladipage/subisneaker/.claude/worktrees/magical-perlman-8fcf9b/shoe.png\")",
+      "Bash(grep -o 'src=\"data:image/png;base64,[^\"]\\\\{20\\\\}' \"/Users/tunbui/Downloads/SUBI-STORE/Ladipage/subisneaker/.claude/worktrees/magical-perlman-8fcf9b/index.html\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(brew list *)",
+      "Read(//usr/local/bin/**)",
+      "Bash(find /usr /opt /Users/tunbui -name \"gh\" -type f 2>/dev/null | head -5)"
+    ]
+  }
+}
