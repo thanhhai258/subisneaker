@@ -275,7 +275,7 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
   <h1 class="product-title">Giày Thể Thao Nam Cao Cấp<strong>ULTRA RUN PRO 2026</strong></h1>
 
   <div class="countdown-box">
-    <span class="cd-label">⚡ Flash sale kết thúc lúc <strong>22:00</strong> hôm nay — còn:</span>
+    <span class="cd-label">⚡ Flash sale kết thúc lúc <strong>23:59</strong> hôm nay — còn:</span>
     <div class="cd-row">
       <div class="cd-unit"><span id="cdHours">11</span><small>Giờ</small></div>
       <span class="cd-colon">:</span>
@@ -690,7 +690,8 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
     document.getElementById('spAvatar').textContent = d.init;
     document.getElementById('spName').textContent   = d.name;
     document.getElementById('spMsg').textContent    = d.msg;
-    document.getElementById('spTime').textContent   = d.time;
+    var mins = 2 + Math.floor(Math.random() * 57);
+    document.getElementById('spTime').textContent   = mins < 60 ? mins + ' phút trước' : '1 giờ trước';
     var el = document.getElementById('socialProof');
     el.classList.remove('hide');
     setTimeout(function(){ el.classList.add('hide'); }, 3500);
@@ -758,7 +759,8 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
     // G: Validate inline
     var ok = true;
     setError('inputName',  'errName',  !name);  if (!name)  ok = false;
-    setError('inputPhone', 'errPhone', !phone || phone.length < 9); if (!phone || phone.length < 9) ok = false;
+    var phoneInvalid = !phone || phone.length !== 10;
+    setError('inputPhone', 'errPhone', phoneInvalid); if (phoneInvalid) ok = false;
     setError('inputAddr',  'errAddr',  !addr);  if (!addr)  ok = false;
     setError('inputSize',  'errSize',  !size);  if (!size)  ok = false;
     var errColor = document.getElementById('errColor');
@@ -801,6 +803,15 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
   setTimeout(function() {
     fbq('trackCustom', 'TimeOnPage_30_seconds');
   }, 30000);
+
+  // Dynamic review dates — mỗi lần load random ±2 ngày quanh mốc gốc
+  (function() {
+    var seeds = [2, 5, 7, 3, 4];
+    document.querySelectorAll('.rev-meta').forEach(function(el, i) {
+      var d = seeds[i] + Math.floor(Math.random() * 3);
+      el.textContent = el.textContent.replace(/·.*/, '· ' + (d < 7 ? d + ' ngày trước' : Math.floor(d/7) + ' tuần trước'));
+    });
+  })();
 
   // --- Facebook Pixel: ScrollDepth_50_percent ---
   (function() {
