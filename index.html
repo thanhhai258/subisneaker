@@ -567,6 +567,8 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
 </div>
 
 <script>
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxR3259dSBgqwAZT0qNpb3KlBbcgZWcMaUm8w8Ybz10ikyjNhI8Od6mrYlRnm3LQy4iEw/exec';
+
   // ---- CAROUSEL ----
   var IMAGES = [
     "image_product/img1.jpg",
@@ -770,7 +772,6 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
     var note = document.getElementById('inputNote').value.trim();
     var btn = document.querySelector('.submit-btn');
     btn.textContent = 'ĐANG GỬI ĐƠN...'; btn.disabled = true;
-    var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxR3259dSBgqwAZT0qNpb3KlBbcgZWcMaUm8w8Ybz10ikyjNhI8Od6mrYlRnm3LQy4iEw/exec';
     var params = new URLSearchParams({ho_ten:name, so_dien_thoai:phone, size_giay:size, mau_sac:selectedColor, dia_chi:addr, san_pham:'Ultra Run Pro 2026 - 250.000đ - ' + selectedColor, ghi_chu:note});
     try { await fetch(SCRIPT_URL+'?'+params, {method:'GET',mode:'no-cors'}); } catch(e){}
     btn.textContent = 'ĐẶT HÀNG — THANH TOÁN KHI NHẬN'; btn.disabled = false;
@@ -812,6 +813,9 @@ body { font-family: 'Barlow', sans-serif; background: #f5f5f5; color: #222; max-
       el.textContent = el.textContent.replace(/·.*/, '· ' + (d < 7 ? d + ' ngày trước' : Math.floor(d/7) + ' tuần trước'));
     });
   })();
+
+  // Track pageview vào Google Sheets
+  fetch(SCRIPT_URL + '?type=pageview', { method: 'GET', mode: 'no-cors' }).catch(function(){});
 
   // --- Facebook Pixel: ScrollDepth_50_percent ---
   (function() {

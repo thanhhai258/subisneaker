@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard — SUBI STORE</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Barlow', sans-serif; background: #f0f2f5; min-height: 100vh; }
+
+/* AUTH */
+.auth-screen {
+  position: fixed; inset: 0;
+  background: linear-gradient(135deg, #f07820, #e05a00);
+  display: flex; align-items: center; justify-content: center; z-index: 100;
+}
+.auth-box {
+  background: #fff; border-radius: 16px; padding: 36px 28px;
+  width: 90%; max-width: 320px; text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+.auth-logo { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: #f07820; letter-spacing: 1px; }
+.auth-sub { font-size: 13px; color: #999; margin: 4px 0 24px; }
+.auth-input {
+  width: 100%; border: 1.5px solid #ddd; border-radius: 8px; padding: 13px;
+  font-size: 16px; font-family: 'Barlow', sans-serif; outline: none;
+  text-align: center; letter-spacing: 3px; margin-bottom: 12px;
+}
+.auth-input:focus { border-color: #f07820; }
+.auth-btn {
+  width: 100%; background: #f07820; color: #fff; border: none; border-radius: 8px;
+  padding: 14px; font-family: 'Barlow', sans-serif; font-weight: 800;
+  font-size: 15px; cursor: pointer; letter-spacing: 1px;
+}
+.auth-btn:active { background: #e05a00; }
+.auth-error { font-size: 12px; color: #e53935; margin-top: 10px; min-height: 16px; }
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #f07820, #e05a00); color: #fff;
+  padding: 14px 16px; display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 10;
+}
+.header-left .title { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px; }
+.header-left .subtitle { font-size: 11px; opacity: 0.82; margin-top: 1px; }
+.logout-btn {
+  background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.4);
+  color: #fff; border-radius: 6px; padding: 7px 13px;
+  font-size: 12px; font-family: 'Barlow', sans-serif; font-weight: 700; cursor: pointer;
+}
+
+/* DATE BAR */
+.date-bar {
+  background: #fff; padding: 10px 16px; border-bottom: 1px solid #e8e8e8;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.date-label { font-size: 13px; color: #555; }
+.date-label strong { color: #222; }
+.refresh-btn {
+  background: none; border: 1.5px solid #f07820; color: #f07820;
+  border-radius: 6px; padding: 6px 14px; font-size: 12px; font-weight: 700;
+  font-family: 'Barlow', sans-serif; cursor: pointer;
+}
+.refresh-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* CARDS */
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px 14px 4px; }
+.card {
+  background: #fff; border-radius: 12px; padding: 18px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.card.wide { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-around; }
+.card-label { font-size: 10px; font-weight: 700; color: #bbb; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.card-value { font-family: 'Bebas Neue', sans-serif; font-size: 46px; color: #f07820; line-height: 1; }
+.card-sub { font-size: 11px; color: #ccc; margin-top: 5px; }
+.card-compare { font-size: 11px; color: #aaa; margin-top: 5px; }
+.card-compare .up   { color: #27ae60; font-weight: 700; }
+.card-compare .down { color: #e74c3c; font-weight: 700; }
+.card-compare .flat { color: #aaa; }
+.wide-item { text-align: center; }
+.wide-item .card-label { text-align: center; }
+.wide-item .card-value { font-size: 32px; }
+.divider { width: 1px; background: #f0f0f0; height: 60px; }
+
+/* ERROR */
+.error-box {
+  margin: 12px 14px; background: #fff5f5; border: 1px solid #ffcdd2;
+  border-radius: 8px; padding: 14px 16px; font-size: 13px; color: #c62828;
+  display: none; line-height: 1.6;
+}
+
+/* FOOTER */
+.footer { padding: 10px 14px 28px; text-align: center; font-size: 11px; color: #ccc; }
+
+/* SKELETON */
+.skeleton { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: shimmer 1.2s infinite; border-radius: 4px; }
+@keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+.sk-val { height: 46px; width: 70%; margin: 6px 0 5px; }
+.sk-sub { height: 11px; width: 50%; }
+</style>
+</head>
+<body>
+
+<!-- AUTH -->
+<div class="auth-screen" id="authScreen">
+  <div class="auth-box">
+    <div class="auth-logo">SUBI STORE</div>
+    <div class="auth-sub">Dashboard quản lý đơn hàng</div>
+    <input class="auth-input" type="password" id="passInput" placeholder="Mật khẩu" autocomplete="current-password"
+      onkeydown="if(event.key==='Enter')doLogin()" />
+    <button class="auth-btn" onclick="doLogin()">ĐĂNG NHẬP</button>
+    <div class="auth-error" id="authError"></div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" style="display:none">
+
+  <div class="header">
+    <div class="header-left">
+      <div class="title">📊 SUBI DASHBOARD</div>
+      <div class="subtitle" id="lastUpdate">Đang tải...</div>
+    </div>
+    <button class="logout-btn" onclick="doLogout()">Đăng xuất</button>
+  </div>
+
+  <div class="date-bar">
+    <span class="date-label">Ngày: <strong id="todayLabel">—</strong></span>
+    <button class="refresh-btn" id="refreshBtn" onclick="manualRefresh()">⟳ Làm mới</button>
+  </div>
+
+  <div class="error-box" id="errorBox">
+    ⚠️ Không thể tải dữ liệu.<br>
+    Kiểm tra lại Apps Script đã được <strong>triển khai phiên bản mới</strong> chưa.
+  </div>
+
+  <div class="cards" id="cards">
+    <!-- skeleton -->
+    <div class="card"><div class="card-label">LƯỢT XEM</div><div class="skeleton sk-val"></div><div class="skeleton sk-sub"></div></div>
+    <div class="card"><div class="card-label">ĐƠN HÀNG</div><div class="skeleton sk-val"></div><div class="skeleton sk-sub"></div></div>
+    <div class="card"><div class="card-label">CHUYỂN ĐỔI</div><div class="skeleton sk-val"></div><div class="skeleton sk-sub"></div></div>
+    <div class="card"><div class="card-label">TỔNG ĐƠN</div><div class="skeleton sk-val"></div><div class="skeleton sk-sub"></div></div>
+  </div>
+
+  <div class="footer" id="nextRefreshLabel"></div>
+
+</div>
+
+<script>
+  // ── CẤU HÌNH ──────────────────────────────────────────────────
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxR3259dSBgqwAZT0qNpb3KlBbcgZWcMaUm8w8Ybz10ikyjNhI8Od6mrYlRnm3LQy4iEw/exec';
+  var PASS_HASH  = btoa('subi2026'); // ← đổi mật khẩu tại đây
+  var AUTH_KEY   = 'subi_dash_v1';
+  var REFRESH_S  = 300; // tự làm mới mỗi 5 phút
+
+  // ── AUTH ──────────────────────────────────────────────────────
+  function doLogin() {
+    var val = document.getElementById('passInput').value;
+    if (btoa(val) === PASS_HASH) {
+      localStorage.setItem(AUTH_KEY, PASS_HASH);
+      showDashboard();
+    } else {
+      document.getElementById('authError').textContent = 'Mật khẩu không đúng';
+      document.getElementById('passInput').value = '';
+    }
+  }
+
+  function doLogout() {
+    localStorage.removeItem(AUTH_KEY);
+    location.reload();
+  }
+
+  function showDashboard() {
+    document.getElementById('authScreen').style.display = 'none';
+    document.getElementById('dashboard').style.display  = 'block';
+    startAutoRefresh();
+  }
+
+  // Kiểm tra auth khi load
+  if (localStorage.getItem(AUTH_KEY) === PASS_HASH) {
+    showDashboard();
+  }
+
+  // ── FETCH (JSONP — tránh CORS) ────────────────────────────────
+  function fetchStats() {
+    return new Promise(function(resolve, reject) {
+      var cb = '_subi' + Date.now();
+      var el = document.createElement('script');
+      var timer = setTimeout(function() { el.remove(); reject(new Error('timeout')); }, 10000);
+      window[cb] = function(data) {
+        clearTimeout(timer); delete window[cb]; el.remove(); resolve(data);
+      };
+      el.onerror = function() { clearTimeout(timer); el.remove(); reject(new Error('network')); };
+      el.src = SCRIPT_URL + '?type=stats&callback=' + cb;
+      document.body.appendChild(el);
+    });
+  }
+
+  // ── LOAD & RENDER ─────────────────────────────────────────────
+  async function loadStats() {
+    document.getElementById('refreshBtn').disabled = true;
+    document.getElementById('errorBox').style.display = 'none';
+
+    try {
+      var d = await fetchStats();
+      renderCards(d);
+      var now = new Date();
+      document.getElementById('lastUpdate').textContent =
+        'Cập nhật lúc ' + now.getHours() + ':' + pad(now.getMinutes());
+    } catch(e) {
+      document.getElementById('errorBox').style.display = 'block';
+    }
+
+    document.getElementById('refreshBtn').disabled = false;
+  }
+
+  function renderCards(d) {
+    if (d.date) {
+      var p = d.date.split('-');
+      document.getElementById('todayLabel').textContent = p[2] + '/' + p[1] + '/' + p[0];
+    }
+
+    var vT = d.views_today      || 0;
+    var oT = d.orders_today     || 0;
+    var vY = d.views_yesterday  || 0;
+    var oY = d.orders_yesterday || 0;
+    var vA = d.views_total      || 0;
+    var oA = d.orders_total     || 0;
+
+    var cr  = vT > 0 ? (oT / vT * 100).toFixed(1) + '%' : '—';
+    var crA = vA > 0 ? (oA / vA * 100).toFixed(1) + '%' : '—';
+
+    document.getElementById('cards').innerHTML =
+      mkCard('👁 LƯỢT XEM', fmt(vT), 'Hôm nay', cmp(vT, vY)) +
+      mkCard('📦 ĐƠN HÀNG', fmt(oT), 'Hôm nay', cmp(oT, oY)) +
+      mkCard('📈 CHUYỂN ĐỔI', cr, 'Tỷ lệ hôm nay', vY > 0 ? 'Hôm qua: ' + (oY/vY*100).toFixed(1) + '%' : 'Hôm qua: —') +
+      mkCard('📊 TỔNG ĐƠN', fmt(oA), 'Tất cả thời gian', 'Tổng view: ' + fmt(vA) + ' · CR ' + crA);
+  }
+
+  function mkCard(label, value, sub, compare) {
+    return '<div class="card">' +
+      '<div class="card-label">' + label + '</div>' +
+      '<div class="card-value">' + value + '</div>' +
+      '<div class="card-sub">' + sub + '</div>' +
+      '<div class="card-compare">' + compare + '</div>' +
+      '</div>';
+  }
+
+  function fmt(n) { return Number(n).toLocaleString('vi-VN'); }
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function cmp(today, yesterday) {
+    var diff = today - yesterday;
+    if (yesterday === 0 && today === 0) return 'Hôm qua: 0';
+    var cls  = diff > 0 ? 'up' : diff < 0 ? 'down' : 'flat';
+    var sign = diff > 0 ? '+' : '';
+    return 'Hôm qua: ' + fmt(yesterday) + ' <span class="' + cls + '">(' + sign + diff + ')</span>';
+  }
+
+  // ── AUTO REFRESH ──────────────────────────────────────────────
+  var countdown = REFRESH_S;
+
+  function manualRefresh() {
+    countdown = REFRESH_S;
+    loadStats();
+  }
+
+  function startAutoRefresh() {
+    loadStats();
+    setInterval(function() {
+      countdown--;
+      var m = Math.floor(countdown / 60), s = countdown % 60;
+      document.getElementById('nextRefreshLabel').textContent =
+        'Tự làm mới sau ' + m + ':' + pad(s);
+      if (countdown <= 0) { countdown = REFRESH_S; loadStats(); }
+    }, 1000);
+  }
+</script>
+</body>
+</html>
